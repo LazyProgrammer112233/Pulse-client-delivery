@@ -1,4 +1,4 @@
-export const allowedDomain = (process.env.ALLOWED_EMAIL_DOMAIN || "flick2know.com").toLowerCase();
+export const allowedDomain = (process.env.ALLOWED_EMAIL_DOMAIN || "fieldassist.com").toLowerCase();
 
 export function isWorkEmail(email?: string | null) {
   if (!email) return false;

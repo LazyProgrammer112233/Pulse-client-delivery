@@ -17,7 +17,7 @@ export async function addUser(_: AdminState, formData: FormData): Promise<AdminS
   const name = String(formData.get("name") ?? "").trim() || null;
   const team = String(formData.get("team") ?? "") as Team;
   const isAdmin = formData.get("isAdmin") === "on";
-  if (!isWorkEmail(email)) return { error: "Use a @flick2know.com work email." };
+  if (!isWorkEmail(email)) return { error: "Use a @fieldassist.com work email." };
   if (!TEAM_IDS.includes(team)) return { error: "Pick a team." };
   const [existing] = await db.select().from(schema.users).where(eq(schema.users.email, email)).limit(1);
   if (existing) return { error: `${email} already has access.` };

@@ -18,7 +18,7 @@ export default async function UsersPage() {
     <>
       <PageHeader
         title="Users and roles"
-        description="Everyone with a @flick2know.com account can sign in. Set their team, make admins, or remove access."
+        description="Everyone with a @fieldassist.com account can sign in. Set their team, make admins, or remove access."
       />
       <AddUserForm />
       <div className="mt-6 overflow-x-auto rounded-2xl border border-line bg-white">
