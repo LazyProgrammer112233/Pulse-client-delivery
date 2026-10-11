@@ -64,7 +64,6 @@ In **Settings > Environment Variables**, add:
 | `SMTP_USER` | Brevo SMTP login (or the Gmail address) |
 | `SMTP_PASS` | Brevo SMTP key (or the Gmail app password) |
 | `EMAIL_FROM` | `Pulse Delivery <the-sender-you-verified@...>` |
-| `ALLOWED_EMAIL_DOMAIN` | `fieldassist.com` |
 | `ADMIN_EMAILS` | Comma-separated emails that become admins on first sign-in, for example `ishan@fieldassist.com` |
 
 Then **Deployments > Redeploy**. Open the site, enter your work email, and sign in with the code.

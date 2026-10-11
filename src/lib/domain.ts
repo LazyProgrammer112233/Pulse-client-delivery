@@ -1,4 +1,5 @@
-export const allowedDomain = (process.env.ALLOWED_EMAIL_DOMAIN || "fieldassist.com").toLowerCase();
+// Only this work domain can sign in. Kept in code so a stale Vercel variable can never override it.
+export const allowedDomain = "fieldassist.com";
 
 export function isWorkEmail(email?: string | null) {
   if (!email) return false;
