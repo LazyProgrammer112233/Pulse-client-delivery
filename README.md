@@ -29,7 +29,8 @@ Next: the requirement builder (pages, KPIs, charts, branding, add-ons), then the
 1. Sign in at [vercel.com](https://vercel.com) with the GitHub account that owns this repo.
 2. **Add New > Project**, import `Pulse-client-delivery`, and click **Deploy**. The first deploy fails until steps 2 and 3 are done; that's expected.
 3. In the project, open **Storage > Create Database > Neon (Serverless Postgres)**, pick the free plan and the region nearest your users (for example `aws-ap-south-1`, Mumbai), and connect it to the project for all environments.
-4. Vercel now adds `DATABASE_URL` and `DATABASE_URL_UNPOOLED` to the project's environment variables. You don't need to copy them anywhere.
+4. Vercel now adds the connection strings (`DATABASE_URL`, `DATABASE_URL_UNPOOLED`, or the same names with the prefix you chose) to the project's environment variables. The app finds them under any of those names, so you don't need to copy them anywhere.
+5. Check under **Settings > Environment Variables** that they are enabled for **Production** and **Preview**, then **Deployments > Redeploy**. A build that started before the database was connected can't see it.
 
 Every Vercel build runs `npm run vercel-build`, which applies migrations, seeds the Pulse page catalog and clients, then builds the app. You never run migrations by hand.
 
