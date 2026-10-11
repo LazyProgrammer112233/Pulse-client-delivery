@@ -8,6 +8,13 @@
       "when": 1791726190666,
       "tag": "0000_purple_revanche",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791728059625,
+      "tag": "0001_opposite_supernaut",
+      "breakpoints": true
     }
   ]
 }

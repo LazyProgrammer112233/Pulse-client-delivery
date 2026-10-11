@@ -1,4 +1,4 @@
-import NextAuth, { CredentialsSignin } from "next-auth";
+import NextAuth from "next-auth";
 import MicrosoftEntraID from "next-auth/providers/microsoft-entra-id";
 import Credentials from "next-auth/providers/credentials";
 import type { Provider } from "next-auth/providers";
@@ -6,8 +6,7 @@ import { eq } from "drizzle-orm";
 import { authConfig } from "./auth.config";
 import { db, schema } from "./db";
 import { isWorkEmail, isSeedAdmin } from "./lib/domain";
-
-const devLoginEnabled = process.env.AUTH_DEV_LOGIN === "true" && process.env.NODE_ENV !== "production";
+import { verifyCode } from "./lib/otp";
 
 export const isMicrosoftConfigured = !!(
   process.env.AUTH_MICROSOFT_ENTRA_ID_ID &&
@@ -15,29 +14,29 @@ export const isMicrosoftConfigured = !!(
   process.env.AUTH_MICROSOFT_ENTRA_ID_ISSUER
 );
 
-const providers: Provider[] = [];
+const providers: Provider[] = [
+  // Primary sign-in: a 6-digit code emailed to a @flick2know.com address
+  Credentials({
+    id: "email-otp",
+    name: "Email code",
+    credentials: { email: { label: "Email" }, code: { label: "Code" } },
+    async authorize(credentials) {
+      const email = String(credentials?.email ?? "").trim().toLowerCase();
+      const code = String(credentials?.code ?? "").trim();
+      if (!isWorkEmail(email)) return null;
+      if (!(await verifyCode(email, code))) return null;
+      return { id: email, email };
+    },
+  }),
+];
 
+// Microsoft 365 sign-in stays available and switches on once its app registration is configured
 if (isMicrosoftConfigured) {
   providers.push(
     MicrosoftEntraID({
       clientId: process.env.AUTH_MICROSOFT_ENTRA_ID_ID,
       clientSecret: process.env.AUTH_MICROSOFT_ENTRA_ID_SECRET,
       issuer: process.env.AUTH_MICROSOFT_ENTRA_ID_ISSUER,
-    }),
-  );
-}
-
-if (devLoginEnabled) {
-  providers.push(
-    Credentials({
-      id: "dev",
-      name: "Developer login",
-      credentials: { email: { label: "Email" } },
-      authorize(credentials) {
-        const email = String(credentials?.email ?? "").trim().toLowerCase();
-        if (!email) throw new CredentialsSignin();
-        return { id: email, email, name: email.split("@")[0] };
-      },
     }),
   );
 }
@@ -96,4 +95,3 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
 });
 
-export const isDevLoginEnabled = devLoginEnabled;

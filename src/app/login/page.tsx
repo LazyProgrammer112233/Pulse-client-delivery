@@ -1,40 +1,38 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
-import { AlertTriangle, ShieldCheck, LayoutDashboard, Workflow, Users } from "lucide-react";
-import { signIn, isDevLoginEnabled, isMicrosoftConfigured } from "@/auth";
+import { AlertTriangle, ShieldCheck, LayoutDashboard, Workflow, Users, Mail, ArrowLeft, KeyRound } from "lucide-react";
+import { signIn, isMicrosoftConfigured } from "@/auth";
 import { getCurrentUser } from "@/lib/session";
 import { allowedDomain, isWorkEmail } from "@/lib/domain";
+import { requestCode, verifyLoginCode } from "./actions";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Input, Label } from "@/components/ui/input";
 
 const ERRORS: Record<string, string> = {
-  not_work_email: `This email is not a work email. Please sign in with your @${allowedDomain} account.`,
+  not_work_email: `This email is not a work email. Please use your @${allowedDomain} email address.`,
   deactivated: "Your access to Pulse Delivery has been removed. Ask an admin to restore it.",
-  AccessDenied: `This email is not a work email. Please sign in with your @${allowedDomain} account.`,
-  Configuration: "Sign-in is not configured yet. Ask an admin to check the Microsoft app settings.",
+  AccessDenied: `This email is not a work email. Please use your @${allowedDomain} email address.`,
+  invalid_code: "That code is wrong or has expired. Check the latest email or send a new code.",
+  send_failed: "We couldn't send the code. Try again in a minute, or tell an admin if it keeps failing.",
+  rate_limited: "Too many codes requested. Wait 15 minutes and try again.",
 };
 
-export default async function LoginPage({ searchParams }: { searchParams: Promise<{ error?: string }> }) {
-  const { error } = await searchParams;
+export default async function LoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string; step?: string; email?: string }>;
+}) {
+  const { error, step, email = "" } = await searchParams;
   const user = await getCurrentUser();
   if (user) redirect(user.team ? "/dashboard" : "/onboarding");
 
-  const message = error
-    ? (ERRORS[error] ?? "Sign-in failed. Please try again.")
-    : !isMicrosoftConfigured
-      ? ERRORS.Configuration
-      : null;
+  const onCodeStep = step === "code" && isWorkEmail(email);
+  const message = error ? (ERRORS[error] ?? "Sign-in failed. Please try again.") : null;
 
   async function microsoft() {
     "use server";
     await signIn("microsoft-entra-id", { redirectTo: "/dashboard" });
-  }
-
-  async function dev(formData: FormData) {
-    "use server";
-    const email = String(formData.get("email") ?? "").trim().toLowerCase();
-    if (!isWorkEmail(email)) redirect("/login?error=not_work_email");
-    await signIn("dev", { email, redirectTo: "/dashboard" });
   }
 
   return (
@@ -70,8 +68,23 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
           <div className="lg:hidden">
             <Logo />
           </div>
-          <h2 className="mt-6 text-2xl font-semibold text-ink lg:mt-0">Sign in</h2>
-          <p className="mt-1 text-sm text-muted">Use your Flick2Know Microsoft 365 account.</p>
+
+          {onCodeStep ? (
+            <>
+              <span className="mt-6 flex size-11 items-center justify-center rounded-xl bg-brand-50 text-brand-600 lg:mt-0">
+                <Mail className="size-5" />
+              </span>
+              <h2 className="mt-4 text-2xl font-semibold text-ink">Check your email</h2>
+              <p className="mt-1 text-sm text-muted">
+                We sent a 6-digit code to <span className="font-medium text-ink">{email}</span>. It expires in 10 minutes.
+              </p>
+            </>
+          ) : (
+            <>
+              <h2 className="mt-6 text-2xl font-semibold text-ink lg:mt-0">Sign in</h2>
+              <p className="mt-1 text-sm text-muted">We&apos;ll email you a one-time code. No password needed.</p>
+            </>
+          )}
 
           {message && (
             <div
@@ -83,27 +96,72 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
             </div>
           )}
 
-          <form action={microsoft} className="mt-6">
-            <Button type="submit" size="lg" className="w-full justify-center" disabled={!isMicrosoftConfigured}>
-              <MicrosoftMark />
-              Sign in with Microsoft
-            </Button>
-          </form>
+          {onCodeStep ? (
+            <>
+              <form action={verifyLoginCode} className="mt-6">
+                <input type="hidden" name="email" value={email} />
+                <Label htmlFor="code">Sign-in code</Label>
+                <Input
+                  id="code"
+                  name="code"
+                  required
+                  autoFocus
+                  inputMode="numeric"
+                  autoComplete="one-time-code"
+                  pattern="\d{6}"
+                  maxLength={6}
+                  placeholder="000000"
+                  className="h-12 text-center text-2xl font-semibold tracking-[0.5em]"
+                />
+                <Button type="submit" size="lg" className="mt-4 w-full justify-center">
+                  <KeyRound />
+                  Verify and sign in
+                </Button>
+              </form>
+              <div className="mt-4 flex items-center justify-between text-sm">
+                <Link href={`/login?email=${encodeURIComponent(email)}`} className="inline-flex items-center gap-1 text-muted hover:text-brand-700">
+                  <ArrowLeft className="size-4" />
+                  Use a different email
+                </Link>
+                <form action={requestCode}>
+                  <input type="hidden" name="email" value={email} />
+                  <button type="submit" className="font-medium text-brand-600 hover:text-brand-700">
+                    Send a new code
+                  </button>
+                </form>
+              </div>
+            </>
+          ) : (
+            <form action={requestCode} className="mt-6">
+              <Label htmlFor="email">Work email</Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                required
+                autoFocus
+                autoComplete="email"
+                defaultValue={email}
+                placeholder={`name@${allowedDomain}`}
+              />
+              <Button type="submit" size="lg" className="mt-4 w-full justify-center">
+                <Mail />
+                Email me a code
+              </Button>
+            </form>
+          )}
 
           <p className="mt-4 flex items-center justify-center gap-1.5 text-xs text-muted">
             <ShieldCheck className="size-3.5 text-brand-600" />
             Only @{allowedDomain} emails can access this workspace
           </p>
 
-          {isDevLoginEnabled && (
-            <form action={dev} className="mt-6 border-t border-line pt-6">
-              <p className="mb-2 text-xs font-medium uppercase tracking-wide text-muted">Local development login</p>
-              <div className="flex gap-2">
-                <Input name="email" type="email" required placeholder={`name@${allowedDomain}`} />
-                <Button type="submit" variant="outline">
-                  Continue
-                </Button>
-              </div>
+          {isMicrosoftConfigured && !onCodeStep && (
+            <form action={microsoft} className="mt-6 border-t border-line pt-6">
+              <Button type="submit" variant="outline" size="lg" className="w-full justify-center">
+                <MicrosoftMark />
+                Sign in with Microsoft
+              </Button>
             </form>
           )}
         </section>

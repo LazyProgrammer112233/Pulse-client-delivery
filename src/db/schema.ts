@@ -205,3 +205,18 @@ export const catalogPages = pgTable("catalog_pages", {
   defaultTabs: jsonb("default_tabs").$type<string[]>().notNull().default([]),
   usedBy: integer("used_by").notNull().default(0),
 });
+
+// One-time sign-in codes sent by email. Only a hash of the code is stored.
+export const loginCodes = pgTable(
+  "login_codes",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    email: text("email").notNull(),
+    codeHash: text("code_hash").notNull(),
+    attempts: integer("attempts").notNull().default(0),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    consumedAt: timestamp("consumed_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("login_codes_email_idx").on(t.email, t.createdAt)],
+);
