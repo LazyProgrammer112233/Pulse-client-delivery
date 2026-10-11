@@ -1,14 +1,24 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { ImagePlus, Save, Trash2 } from "lucide-react";
+import { ImagePlus, Loader2, Save, Trash2 } from "lucide-react";
 import { saveBranding } from "@/app/(app)/projects/[id]/requirement/actions";
 import { LOGO_MAX_BYTES, type Branding } from "@/lib/requirement";
 import { Button } from "@/components/ui/button";
 import { Input, Label } from "@/components/ui/input";
 import { useSave, SaveStatus } from "./save-state";
 
-export function BrandingEditor({ projectId, initial, clientName }: { projectId: string; initial: Branding; clientName: string }) {
+export function BrandingEditor({
+  projectId,
+  initial,
+  clientName,
+  onSaved,
+}: {
+  projectId: string;
+  initial: Branding;
+  clientName: string;
+  onSaved: (b: Branding) => void;
+}) {
   const [b, setB] = useState<Branding>({ primaryColor: "#1e56d9", secondaryColor: "#eef4ff", ...initial });
   const [fileError, setFileError] = useState<string | null>(null);
   const file = useRef<HTMLInputElement>(null);
@@ -104,8 +114,14 @@ export function BrandingEditor({ projectId, initial, clientName }: { projectId: 
 
       <div className="flex flex-wrap items-center justify-end gap-3 lg:col-span-2">
         <SaveStatus {...save} />
-        <Button type="button" disabled={save.pending} onClick={() => save.run(() => saveBranding(projectId, b))}>
-          <Save />
+        <Button
+          type="button"
+          disabled={save.pending}
+          onClick={() =>
+            save.run(() => saveBranding(projectId, b), { pending: "Saving the logo and colors", done: "Branding saved" }, (r) => r.branding && onSaved(r.branding))
+          }
+        >
+          {save.pending ? <Loader2 className="animate-spin" /> : <Save />}
           Save branding
         </Button>
       </div>

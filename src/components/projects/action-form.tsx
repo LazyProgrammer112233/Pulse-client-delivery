@@ -5,6 +5,7 @@ import type { ActionState } from "@/app/(app)/projects/actions";
 import { Input, Label, Select, Textarea } from "@/components/ui/input";
 import { SubmitButton } from "@/components/ui/submit-button";
 import { Alert } from "@/components/ui/alert";
+import { withToast } from "@/components/ui/toast";
 import type { ButtonProps } from "@/components/ui/button";
 
 export type Field =
@@ -16,11 +17,15 @@ export type Field =
   | { type: "radio"; name: string; label: string; options: { value: string; label: string }[] }
   | { type: "hidden"; name: string; value: string };
 
-/** One lifecycle action: its inputs, a submit button with a pending state, and any error from the server. */
+/**
+ * One lifecycle action: its inputs, a submit button with a pending state, and any error from the server.
+ * A status pop-up shows what's happening; the server's reply supplies the "done" text.
+ */
 export function ActionForm({
   action,
   fields = [],
   submit,
+  pendingText = "Working on it",
   variant = "primary",
   confirm,
   className,
@@ -28,11 +33,16 @@ export function ActionForm({
   action: (state: ActionState, formData: FormData) => Promise<ActionState>;
   fields?: Field[];
   submit: React.ReactNode;
+  pendingText?: string;
   variant?: ButtonProps["variant"];
   confirm?: string;
   className?: string;
 }) {
-  const [state, formAction] = useActionState(action, undefined);
+  const [state, formAction] = useActionState(
+    (prev: ActionState, formData: FormData) =>
+      withToast(() => action(prev, formData), { pending: pendingText, done: (r) => r?.message ?? "Done" }) as Promise<ActionState>,
+    undefined,
+  );
   const inline = fields.filter((f) => f.type !== "hidden").length > 0;
 
   return (

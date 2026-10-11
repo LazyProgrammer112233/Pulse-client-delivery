@@ -6,6 +6,7 @@ import { createProject, type FormState } from "@/app/(app)/projects/actions";
 import { Button } from "@/components/ui/button";
 import { Input, Label } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { withToast } from "@/components/ui/toast";
 
 type Client = { id: string; name: string; companyId: number | null };
 
@@ -16,7 +17,10 @@ const PRODUCTS = [
 ] as const;
 
 export function NewProjectForm({ clients }: { clients: Client[] }) {
-  const [state, action, pending] = useActionState<FormState, FormData>(createProject, undefined);
+  const [state, action, pending] = useActionState<FormState, FormData>(
+    (prev, fd) => withToast(() => createProject(prev, fd), { pending: "Creating the project", done: "Project created. Now build the requirement." }) as Promise<FormState>,
+    undefined,
+  );
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<Client | null>(null);
   const [manual, setManual] = useState(false);

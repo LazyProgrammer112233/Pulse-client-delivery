@@ -4,6 +4,7 @@ import { useActionState } from "react";
 import { Upload, AlertTriangle, CheckCircle2 } from "lucide-react";
 import type { ImportState } from "@/app/(app)/clients/actions";
 import { Button } from "@/components/ui/button";
+import { withToast } from "@/components/ui/toast";
 
 export function CsvImport({
   title,
@@ -14,7 +15,10 @@ export function CsvImport({
   help: React.ReactNode;
   action: (state: ImportState, formData: FormData) => Promise<ImportState>;
 }) {
-  const [state, formAction, pending] = useActionState<ImportState, FormData>(action, undefined);
+  const [state, formAction, pending] = useActionState<ImportState, FormData>(
+    (prev, fd) => withToast(() => action(prev, fd), { pending: "Importing the file", done: (r) => r?.ok ?? "Import finished" }) as Promise<ImportState>,
+    undefined,
+  );
   return (
     <form action={formAction} className="card-surface p-5">
       <div className="flex items-center gap-2">

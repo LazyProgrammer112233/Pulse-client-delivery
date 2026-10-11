@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardBody, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AddUserForm } from "@/components/admin/add-user-form";
 import { TeamSelect } from "@/components/admin/team-select";
+import { ToastForm } from "@/components/ui/toast-form";
 import { ConfirmButton } from "@/components/ui/confirm-button";
 
 const EVENT_LABEL: Record<string, string> = {
@@ -123,41 +124,53 @@ export default async function UsersPage() {
                   <td className="px-4 py-3">
                     <div className="flex justify-end gap-1">
                       {!self && (
-                        <form action={updateUser.bind(null, u.id)}>
+                        <ToastForm
+                          action={updateUser.bind(null, u.id)}
+                          pending={u.isAdmin ? "Removing admin rights" : "Making them an admin"}
+                          done={u.isAdmin ? `${u.email} is no longer an admin` : `${u.email} is now an admin`}
+                        >
                           <input type="hidden" name="isAdmin" value={u.isAdmin ? "false" : "true"} />
                           <IconButton title={u.isAdmin ? "Remove admin" : "Make admin"}>
                             {u.isAdmin ? <ShieldOff className="size-4" /> : <ShieldCheck className="size-4" />}
                           </IconButton>
-                        </form>
+                        </ToastForm>
                       )}
                       {!self && !!s?.open && (
-                        <form action={signOutEverywhere.bind(null, u.id)}>
+                        <ToastForm action={signOutEverywhere.bind(null, u.id)} pending="Signing them out" done={`Signed ${u.email} out of every device`}>
                           <IconButton title="Sign out of every device">
                             <LogOut className="size-4" />
                           </IconButton>
-                        </form>
+                        </ToastForm>
                       )}
                       {!self && u.passwordHash && (
                         <ConfirmButton
                           action={resetUserPassword.bind(null, u.id)}
                           title="Reset password"
+                          pending="Clearing the password"
+                          done={`Cleared ${u.email}'s password and signed them out`}
                           message={`Clear ${u.email}'s password and sign them out? They sign up again with the same email to choose a new one.`}
                         >
                           <KeyRound className="size-4" />
                         </ConfirmButton>
                       )}
                       {!self && (
-                        <form action={updateUser.bind(null, u.id)}>
+                        <ToastForm
+                          action={updateUser.bind(null, u.id)}
+                          pending={u.active ? "Revoking access" : "Restoring access"}
+                          done={u.active ? `Revoked access for ${u.email}` : `Restored access for ${u.email}`}
+                        >
                           <input type="hidden" name="active" value={u.active ? "false" : "true"} />
                           <IconButton title={u.active ? "Revoke access" : "Restore access"} danger={u.active}>
                             {u.active ? <UserX className="size-4" /> : <UserCheck className="size-4" />}
                           </IconButton>
-                        </form>
+                        </ToastForm>
                       )}
                       {!self && (
                         <ConfirmButton
                           action={removeUser.bind(null, u.id)}
                           title="Remove user"
+                          pending="Removing the user"
+                          done={`Removed ${u.email}`}
                           danger
                           message={`Remove ${u.email}? Anyone with project history is kept on record with no access.`}
                         >

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, useTransition } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Plus, Pencil, Trash2, Search, BarChart3, Gauge, X, Save, Library, PenLine, Loader2 } from "lucide-react";
 import { deleteItem, saveItem, searchCatalog, type CatalogHit } from "@/app/(app)/projects/[id]/requirement/actions";
 import {
@@ -10,15 +10,15 @@ import {
   WIDTHS,
   isChartKind,
   type ItemInput,
+  type ItemRow,
   type PageInput,
 } from "@/lib/requirement";
 import { Button } from "@/components/ui/button";
 import { Input, Label, Select, Textarea } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { withToast } from "@/components/ui/toast";
 import { useSave, SaveStatus } from "./save-state";
-
-export type ItemRow = ItemInput & { id: string };
 
 const EMPTY: ItemInput = {
   kind: "kpi",
@@ -35,9 +35,35 @@ const EMPTY: ItemInput = {
   colors: DEFAULT_COLORS,
 };
 
-export function ItemsEditor({ projectId, items, pages }: { projectId: string; items: ItemRow[]; pages: PageInput[] }) {
+export function ItemsEditor({
+  projectId,
+  items,
+  onItemsChange,
+  pages,
+}: {
+  projectId: string;
+  items: ItemRow[];
+  onItemsChange: (items: ItemRow[]) => void;
+  pages: PageInput[];
+}) {
   const [editing, setEditing] = useState<ItemInput | null>(null);
-  const [deleting, setDeleting] = useState(false);
+  const [deleting, setDeleting] = useState<string | null>(null);
+
+  function saved(item: ItemRow) {
+    onItemsChange(items.some((i) => i.id === item.id) ? items.map((i) => (i.id === item.id ? item : i)) : [...items, item]);
+    setEditing(null);
+  }
+
+  async function remove(it: ItemRow) {
+    if (!window.confirm(`Delete ${it.title}?`)) return;
+    setDeleting(it.id);
+    const r = await withToast(() => deleteItem(projectId, it.id), { pending: `Deleting ${it.title}`, done: `Deleted ${it.title}` });
+    setDeleting(null);
+    if (!r.error) {
+      onItemsChange(items.filter((i) => i.id !== it.id));
+      if (editing?.id === it.id) setEditing(null);
+    }
+  }
   const pageName = (key: string) => pages.find((p) => p.pageKey === key)?.name;
 
   const groups = useMemo(() => {
@@ -103,15 +129,11 @@ export function ItemsEditor({ projectId, items, pages }: { projectId: string; it
                     <button
                       type="button"
                       title="Delete"
-                      disabled={deleting}
-                      onClick={() => {
-                        if (!window.confirm(`Delete ${it.title}?`)) return;
-                        setDeleting(true);
-                        deleteItem(projectId, it.id).finally(() => setDeleting(false));
-                      }}
+                      disabled={deleting === it.id}
+                      onClick={() => remove(it)}
                       className="rounded-lg p-2 text-danger-600 hover:bg-danger-50 disabled:opacity-50"
                     >
-                      <Trash2 className="size-4" />
+                      {deleting === it.id ? <Loader2 className="size-4 animate-spin" /> : <Trash2 className="size-4" />}
                     </button>
                   </div>
                 </li>
@@ -127,7 +149,8 @@ export function ItemsEditor({ projectId, items, pages }: { projectId: string; it
           projectId={projectId}
           pages={pages}
           initial={editing}
-          onDone={() => setEditing(null)}
+          onSaved={saved}
+          onCancel={() => setEditing(null)}
         />
       ) : (
         <div className="mt-4 flex flex-wrap gap-2">
@@ -149,12 +172,14 @@ function ItemForm({
   projectId,
   pages,
   initial,
-  onDone,
+  onSaved,
+  onCancel,
 }: {
   projectId: string;
   pages: PageInput[];
   initial: ItemInput;
-  onDone: () => void;
+  onSaved: (item: ItemRow) => void;
+  onCancel: () => void;
 }) {
   const [item, setItem] = useState<ItemInput>(initial);
   const [source, setSource] = useState<"catalog" | "custom">(initial.id && !initial.catalogId ? "custom" : "catalog");
@@ -185,7 +210,7 @@ function ItemForm({
     <div ref={ref} className="mt-5 rounded-2xl border border-brand-200 bg-white p-5 shadow-sm">
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-ink">{initial.id ? `Edit ${initial.title}` : chart ? "Add a chart" : "Add a KPI card"}</h3>
-        <button type="button" onClick={onDone} className="rounded-lg p-1.5 text-muted hover:bg-slate-100" aria-label="Close">
+        <button type="button" onClick={onCancel} className="rounded-lg p-1.5 text-muted hover:bg-slate-100" aria-label="Close">
           <X className="size-4" />
         </button>
       </div>
@@ -305,15 +330,24 @@ function ItemForm({
 
       <div className="mt-5 flex flex-wrap items-center justify-end gap-3">
         <SaveStatus {...save} />
-        <Button type="button" variant="outline" onClick={onDone}>
+        <Button type="button" variant="outline" onClick={onCancel}>
           Cancel
         </Button>
         <Button
           type="button"
           disabled={save.pending || !item.title.trim()}
-          onClick={() => save.run(() => saveItem(projectId, item), (r) => r.ok && onDone())}
+          onClick={() => {
+            const name = item.title.trim();
+            save.run(
+              () => saveItem(projectId, item),
+              initial.id
+                ? { pending: `Saving changes to ${name}`, done: `Saved changes to ${name}` }
+                : { pending: `Adding ${name}`, done: `Added ${name} to the requirement` },
+              (r) => r.item && onSaved(r.item),
+            );
+          }}
         >
-          <Save />
+          {save.pending ? <Loader2 className="animate-spin" /> : <Save />}
           {initial.id ? "Save changes" : chart ? "Add chart" : "Add KPI"}
         </Button>
       </div>
@@ -324,11 +358,22 @@ function ItemForm({
 function CatalogPicker({ group, selectedId, onPick }: { group: "kpi" | "chart"; selectedId: string | null; onPick: (h: CatalogHit) => void }) {
   const [q, setQ] = useState("");
   const [hits, setHits] = useState<CatalogHit[]>([]);
-  const [loading, start] = useTransition();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const t = setTimeout(() => start(async () => setHits(await searchCatalog(q, group))), q ? 250 : 0);
-    return () => clearTimeout(t);
+    let live = true;
+    setLoading(true);
+    const t = setTimeout(async () => {
+      const found = await searchCatalog(q, group).catch(() => [] as CatalogHit[]);
+      if (live) {
+        setHits(found);
+        setLoading(false);
+      }
+    }, q ? 250 : 0);
+    return () => {
+      live = false;
+      clearTimeout(t);
+    };
   }, [q, group]);
 
   return (

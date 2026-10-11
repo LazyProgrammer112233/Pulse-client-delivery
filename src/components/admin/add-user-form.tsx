@@ -4,10 +4,14 @@ import { useActionState, useEffect, useRef } from "react";
 import { UserPlus, AlertTriangle, CheckCircle2 } from "lucide-react";
 import { addUser, type AdminState } from "@/app/(app)/admin/users/actions";
 import { SubmitButton } from "@/components/ui/submit-button";
+import { withToast } from "@/components/ui/toast";
 import { Input, Label, Select } from "@/components/ui/input";
 
 export function AddUserForm() {
-  const [state, action] = useActionState<AdminState, FormData>(addUser, undefined);
+  const [state, action] = useActionState<AdminState, FormData>(
+    (prev, fd) => withToast(() => addUser(prev, fd), { pending: "Adding the user", done: (r) => r?.ok }) as Promise<AdminState>,
+    undefined,
+  );
   const ref = useRef<HTMLFormElement>(null);
   useEffect(() => {
     if (state?.ok) ref.current?.reset();

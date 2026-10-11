@@ -1,7 +1,9 @@
 "use client";
 
-import { useTransition } from "react";
+import { useState } from "react";
 import { Select } from "@/components/ui/input";
+import { withToast } from "@/components/ui/toast";
+import { teamName } from "@/lib/teams";
 
 export function TeamSelect({
   team,
@@ -11,16 +13,19 @@ export function TeamSelect({
   team: string | null;
   action: (formData: FormData) => Promise<void>;
 }) {
-  const [pending, start] = useTransition();
+  const [pending, setPending] = useState(false);
   return (
     <Select
       defaultValue={team ?? ""}
       disabled={pending}
       className="h-9 w-36"
-      onChange={(e) => {
+      onChange={async (e) => {
         const fd = new FormData();
-        fd.set("team", e.target.value);
-        start(() => action(fd));
+        const value = e.target.value;
+        fd.set("team", value);
+        setPending(true);
+        await withToast(() => action(fd), { pending: "Changing the team", done: `Moved to ${teamName(value as "cst")}` });
+        setPending(false);
       }}
     >
       <option value="" disabled>

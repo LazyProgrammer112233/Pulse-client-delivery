@@ -3,12 +3,15 @@
 import { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { withToast } from "./toast";
 
 /** Icon button that asks for confirmation before running a server action. */
 export function ConfirmButton({
   action,
   message,
   title,
+  pending: pendingText,
+  done,
   danger,
   className,
   children,
@@ -16,6 +19,8 @@ export function ConfirmButton({
   action: () => Promise<unknown>;
   message: string;
   title: string;
+  pending: string;
+  done: string;
   danger?: boolean;
   className?: string;
   children: React.ReactNode;
@@ -30,7 +35,7 @@ export function ConfirmButton({
       onClick={() => {
         if (!window.confirm(message)) return;
         setPending(true);
-        action().finally(() => setPending(false));
+        withToast(action, { pending: pendingText, done }).finally(() => setPending(false));
       }}
       className={cn(
         "rounded-lg p-2 transition disabled:opacity-50",

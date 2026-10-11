@@ -28,6 +28,25 @@ import { Card } from "@/components/ui/card";
 import { buttonClasses } from "@/components/ui/button";
 import { ActionForm } from "./action-form";
 
+// What the status pop-up says while each step runs
+const PENDING: Record<string, string> = {
+  submit: "Submitting the requirement to Product",
+  assign_owner: "Saving the product owner",
+  plan: "Saving the estimate and deadline",
+  to_tech: "Handing development to Tech",
+  to_qa: "Moving to Product QA",
+  deployed: "Marking the deployment",
+  to_review: "Sending to CST for review",
+  approve: "Approving the delivery",
+  request_changes: "Sending your change requests",
+  request_extra_round: "Asking Product for a third round",
+  approve_extra_round: "Approving the third round",
+  decline_extra_round: "Declining the third round",
+  hold: "Putting the project on hold",
+  resume: "Resuming the project",
+  cancel: "Cancelling the project",
+};
+
 type Project = {
   id: string;
   status: keyof typeof STATUS;
@@ -51,7 +70,7 @@ export function WorkflowPanel({
   productPeople: { id: string; name: string | null; email: string }[];
   requirementReady: boolean;
 }) {
-  const act = (name: string) => advance.bind(null, p.id, name);
+  const act = (name: string) => ({ action: advance.bind(null, p.id, name), pendingText: PENDING[name] });
   const holding = STATUS[p.status].team;
   const isProduct = isTeam(user, "product");
   const isCst = isTeam(user, "cst");
@@ -72,7 +91,7 @@ export function WorkflowPanel({
         );
         if (requirementReady)
           actions.push(
-            <ActionForm key="submit" action={act("submit")} submit={<><Send /> Submit to Product</>} className="inline-flex" />,
+            <ActionForm key="submit" {...act("submit")} submit={<><Send /> Submit to Product</>} className="inline-flex" />,
           );
       }
       break;
@@ -81,7 +100,7 @@ export function WorkflowPanel({
         actions.push(
           <ActionForm
             key="owner"
-            action={act("assign_owner")}
+            {...act("assign_owner")}
             fields={[{ type: "select", name: "ownerId", label: "Product owner", options: owners, defaultValue: meInProduct }]}
             submit={<><UserCheck /> Assign owner</>}
           />,
@@ -92,7 +111,7 @@ export function WorkflowPanel({
         actions.push(
           <ActionForm
             key="plan"
-            action={act("plan")}
+            {...act("plan")}
             fields={[
               { type: "number", name: "manDays", label: "Estimate (man-days)", placeholder: "e.g. 4", defaultValue: p.estimateManDays ?? undefined },
               { type: "date", name: "targetDate", label: "Target date", defaultValue: p.targetDate ?? undefined },
@@ -108,13 +127,13 @@ export function WorkflowPanel({
         actions.push(
           <ActionForm
             key="qa"
-            action={act("to_qa")}
+            {...act("to_qa")}
             fields={[{ type: "note", label: "Configuration done? (optional note)", placeholder: "What was configured in Pulse" }]}
             submit={<><ClipboardCheck /> Configuration done, start QA</>}
           />,
           <ActionForm
             key="tech"
-            action={act("to_tech")}
+            {...act("to_tech")}
             variant="secondary"
             fields={[{ type: "note", label: "Needs development?", placeholder: "What Tech should build. Add the Azure DevOps PBI under Links.", required: true }]}
             submit={<><Code2 /> Send to Tech</>}
@@ -127,7 +146,7 @@ export function WorkflowPanel({
         actions.push(
           <ActionForm
             key="deploy"
-            action={act("deployed")}
+            {...act("deployed")}
             fields={[
               { type: "radio", name: "environment", label: "Deployed to", options: [{ value: "beta", label: "Beta" }, { value: "prod", label: "Prod" }] },
               { type: "note", label: "Release note (optional)", placeholder: "What changed, build or release number" },
@@ -141,13 +160,13 @@ export function WorkflowPanel({
         actions.push(
           <ActionForm
             key="review"
-            action={act("to_review")}
+            {...act("to_review")}
             fields={[{ type: "note", label: "Note for CST (optional)", placeholder: "Where to look, test logins, known limits" }]}
             submit={<><Send /> Send to CST for review round {p.reviewRound + 1}</>}
           />,
           <ActionForm
             key="back"
-            action={act("to_tech")}
+            {...act("to_tech")}
             variant="secondary"
             fields={[{ type: "note", label: "QA found issues?", placeholder: "What Tech needs to fix", required: true }]}
             submit={<><RotateCcw /> Send back to Tech</>}
@@ -159,7 +178,7 @@ export function WorkflowPanel({
         actions.push(
           <ActionForm
             key="approve"
-            action={act("approve")}
+            {...act("approve")}
             confirm="Approve the delivery and mark the client live?"
             fields={[{ type: "note", label: "Sign-off note (optional)", placeholder: "Anything worth recording" }]}
             submit={<><BadgeCheck /> Approve and go live</>}
@@ -169,7 +188,7 @@ export function WorkflowPanel({
           actions.push(
             <ActionForm
               key="changes"
-              action={act("request_changes")}
+              {...act("request_changes")}
               variant="danger-outline"
               fields={[{ type: "note", label: `Request changes (round ${p.reviewRound} of ${allowedRounds(p)})`, placeholder: "List each change the client needs", required: true }]}
               submit={<><MessageSquareWarning /> Request changes</>}
@@ -179,7 +198,7 @@ export function WorkflowPanel({
           actions.push(
             <ActionForm
               key="extra"
-              action={act("request_extra_round")}
+              {...act("request_extra_round")}
               variant="secondary"
               fields={[{ type: "note", label: "Both review rounds are used. Need a third?", placeholder: "Why another round is needed", required: true }]}
               submit={<><Repeat /> Ask Product for a third round</>}
@@ -189,13 +208,13 @@ export function WorkflowPanel({
       if (isProduct && extraRoundPending(p))
         actions.push(
           <div key="decide" className="grid gap-3 sm:grid-cols-2">
-            <ActionForm action={act("approve_extra_round")} fields={[{ type: "note", label: "CST asked for a third review round", placeholder: "Optional note" }]} submit={<><ThumbsUp /> Approve third round</>} />
-            <ActionForm action={act("decline_extra_round")} variant="danger-outline" fields={[{ type: "note", label: "Or decline it", placeholder: "Why not" }]} submit={<><ThumbsDown /> Decline</>} />
+            <ActionForm {...act("approve_extra_round")} fields={[{ type: "note", label: "CST asked for a third review round", placeholder: "Optional note" }]} submit={<><ThumbsUp /> Approve third round</>} />
+            <ActionForm {...act("decline_extra_round")} variant="danger-outline" fields={[{ type: "note", label: "Or decline it", placeholder: "Why not" }]} submit={<><ThumbsDown /> Decline</>} />
           </div>,
         );
       break;
     case "on_hold":
-      if (isProduct) actions.push(<ActionForm key="resume" action={act("resume")} submit={<><PlayCircle /> Resume</>} className="inline-flex" />);
+      if (isProduct) actions.push(<ActionForm key="resume" {...act("resume")} submit={<><PlayCircle /> Resume</>} className="inline-flex" />);
       break;
   }
 
@@ -235,9 +254,9 @@ export function WorkflowPanel({
           <summary className="cursor-pointer text-muted hover:text-ink">Pause or cancel</summary>
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             {p.status !== "on_hold" && (
-              <ActionForm action={act("hold")} variant="outline" fields={[{ type: "note", label: "Put on hold", placeholder: "Why it's paused (optional)" }]} submit={<><PauseCircle /> Put on hold</>} />
+              <ActionForm {...act("hold")} variant="outline" fields={[{ type: "note", label: "Put on hold", placeholder: "Why it's paused (optional)" }]} submit={<><PauseCircle /> Put on hold</>} />
             )}
-            <ActionForm action={act("cancel")} variant="danger" confirm="Cancel this project? This can't be undone." fields={[{ type: "note", label: "Cancel the project", placeholder: "Why it's cancelled", required: true }]} submit={<><XCircle /> Cancel project</>} />
+            <ActionForm {...act("cancel")} variant="danger" confirm="Cancel this project? This can't be undone." fields={[{ type: "note", label: "Cancel the project", placeholder: "Why it's cancelled", required: true }]} submit={<><XCircle /> Cancel project</>} />
           </div>
         </details>
       )}

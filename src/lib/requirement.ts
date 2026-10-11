@@ -61,6 +61,40 @@ export type ItemInput = {
   colors: string[];
 };
 
+export type ItemRow = ItemInput & { id: string };
+
+/** Database row (project_items) to the shape the builder edits. */
+export function toItemRow(i: {
+  id: string;
+  kind: ItemKind;
+  catalogId: string | null;
+  title: string;
+  description: string | null;
+  formula: string | null;
+  logic: string | null;
+  pageKey: string | null;
+  tab: string | null;
+  chartType: string | null;
+  settings: unknown;
+}): ItemRow {
+  const s = (i.settings ?? {}) as { width?: string; colors?: unknown; configurationId?: string | null };
+  return {
+    id: i.id,
+    kind: i.kind,
+    catalogId: i.catalogId,
+    configurationId: s.configurationId ?? null,
+    title: i.title,
+    description: i.description ?? "",
+    formula: i.formula ?? "",
+    logic: i.logic ?? "",
+    pageKey: i.pageKey ?? "",
+    tab: i.tab ?? "",
+    width: s.width ?? "third",
+    chartType: i.chartType ?? "",
+    colors: Array.isArray(s.colors) ? s.colors.filter((c): c is string => typeof c === "string") : [],
+  };
+}
+
 export type Branding = { displayName?: string; logo?: string; primaryColor?: string; secondaryColor?: string };
 
 // Logos are stored inline in the database, so keep them small

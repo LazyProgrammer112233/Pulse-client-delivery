@@ -1,9 +1,8 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
 import { and, asc, eq, ilike, inArray, or, sql } from "drizzle-orm";
 import { db, schema } from "@/db";
-import { requireUser } from "@/lib/session";
+import { getCurrentUser } from "@/lib/session";
 import { logEvent } from "@/lib/events";
 import { canEditRequirement } from "@/lib/workflow";
 import {
@@ -13,33 +12,39 @@ import {
   WIDTHS,
   isChartKind,
   type Branding,
+  toItemRow,
   type ItemInput,
+  type ItemRow,
   type PageInput,
 } from "@/lib/requirement";
 
-export type SaveResult = { ok?: boolean; error?: string; id?: string };
+export type SaveResult = { ok?: boolean; error?: string };
 
 const clean = (v: unknown, max = 2000) => String(v ?? "").trim().slice(0, max);
 
 async function editable(projectId: string) {
-  const user = await requireUser();
+  // Return an error rather than redirecting, so an expired session shows a message instead of breaking the page
+  const user = await getCurrentUser();
+  if (!user?.team) return { error: "You've been signed out. Sign in again to keep editing." } as const;
   const [project] = await db.select().from(schema.projects).where(eq(schema.projects.id, projectId)).limit(1);
   if (!project) return { error: "This project no longer exists." } as const;
   if (!canEditRequirement(user, project)) return { error: "You can't change this requirement right now." } as const;
   return { user, project } as const;
 }
 
-/** After hand-off, requirement edits show on the timeline so Product and Tech notice them. */
+/**
+ * After hand-off, requirement edits show on the timeline so Product and Tech notice them.
+ * No revalidatePath here: the editors keep their own state from each save's result, so a save
+ * never re-renders the whole builder. Other pages are dynamic and load fresh on the next visit.
+ */
 async function touch(projectId: string, userId: string, status: string, what: string) {
   await db.update(schema.projects).set({ updatedAt: new Date() }).where(eq(schema.projects.id, projectId));
   if (status !== "draft") {
     await logEvent({ projectId, actorId: userId, type: "requirement", message: `Updated the requirement: ${what}` });
   }
-  revalidatePath(`/projects/${projectId}`);
-  revalidatePath(`/projects/${projectId}/requirement`);
 }
 
-export async function savePages(projectId: string, pages: PageInput[]): Promise<SaveResult> {
+export async function savePages(projectId: string, pages: PageInput[]): Promise<SaveResult & { pages?: PageInput[] }> {
   const ctx = await editable(projectId);
   if ("error" in ctx) return { error: ctx.error };
   const valid = await db.select({ key: schema.catalogPages.key }).from(schema.catalogPages);
@@ -61,10 +66,10 @@ export async function savePages(projectId: string, pages: PageInput[]): Promise<
     if (rows.length) await tx.insert(schema.projectPages).values(rows);
   });
   await touch(projectId, ctx.user.id, ctx.project.status, "pages and tabs");
-  return { ok: true };
+  return { ok: true, pages: rows.map((r) => ({ pageKey: r.pageKey, name: r.name, tabs: r.tabs, notes: r.notes ?? "" })) };
 }
 
-export async function saveItem(projectId: string, input: ItemInput): Promise<SaveResult> {
+export async function saveItem(projectId: string, input: ItemInput): Promise<SaveResult & { item?: ItemRow }> {
   const ctx = await editable(projectId);
   if ("error" in ctx) return { error: ctx.error };
   const title = clean(input.title, 160);
@@ -90,14 +95,15 @@ export async function saveItem(projectId: string, input: ItemInput): Promise<Sav
     },
   };
 
-  let id = input.id;
-  if (id) {
+  let row: typeof schema.projectItems.$inferSelect;
+  if (input.id) {
     const [updated] = await db
       .update(schema.projectItems)
       .set(values)
-      .where(and(eq(schema.projectItems.id, id), eq(schema.projectItems.projectId, projectId)))
-      .returning({ id: schema.projectItems.id });
+      .where(and(eq(schema.projectItems.id, input.id), eq(schema.projectItems.projectId, projectId)))
+      .returning();
     if (!updated) return { error: "That item was removed. Add it again." };
+    row = updated;
   } else {
     const [{ next }] = await db
       .select({ next: sql<number>`coalesce(max(${schema.projectItems.displayOrder}), -1)::int + 1` })
@@ -106,11 +112,11 @@ export async function saveItem(projectId: string, input: ItemInput): Promise<Sav
     const [created] = await db
       .insert(schema.projectItems)
       .values({ ...values, displayOrder: next })
-      .returning({ id: schema.projectItems.id });
-    id = created.id;
+      .returning();
+    row = created;
   }
   await touch(projectId, ctx.user.id, ctx.project.status, `${input.id ? "edited" : "added"} ${title}`);
-  return { ok: true, id };
+  return { ok: true, item: toItemRow(row) };
 }
 
 export async function deleteItem(projectId: string, itemId: string): Promise<SaveResult> {
@@ -124,7 +130,7 @@ export async function deleteItem(projectId: string, itemId: string): Promise<Sav
   return { ok: true };
 }
 
-export async function saveBranding(projectId: string, branding: Branding): Promise<SaveResult> {
+export async function saveBranding(projectId: string, branding: Branding): Promise<SaveResult & { branding?: Branding }> {
   const ctx = await editable(projectId);
   if ("error" in ctx) return { error: ctx.error };
   const logo = branding.logo ?? "";
@@ -142,7 +148,7 @@ export async function saveBranding(projectId: string, branding: Branding): Promi
     .values({ projectId, branding: value })
     .onConflictDoUpdate({ target: schema.projectSettings.projectId, set: { branding: value } });
   await touch(projectId, ctx.user.id, ctx.project.status, "branding");
-  return { ok: true };
+  return { ok: true, branding: value };
 }
 
 export async function saveAddons(
@@ -182,7 +188,7 @@ export type CatalogHit = {
 
 /** Searches the Pulse KPI and chart catalog by title, description or configuration id. */
 export async function searchCatalog(query: string, group: "kpi" | "chart"): Promise<CatalogHit[]> {
-  await requireUser();
+  if (!(await getCurrentUser())) return [];
   const q = query.trim().slice(0, 80);
   const kinds = group === "kpi" ? (["kpi"] as const) : (["chart", "dynamic_chart", "composite_chart"] as const);
   return db

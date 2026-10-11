@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Plus, X, Save, LayoutTemplate } from "lucide-react";
+import { Check, Plus, X, Save, LayoutTemplate, Loader2 } from "lucide-react";
 import { savePages } from "@/app/(app)/projects/[id]/requirement/actions";
 import type { PageInput } from "@/lib/requirement";
 import { Button } from "@/components/ui/button";
@@ -9,16 +9,18 @@ import { Input, Textarea } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { useSave, SaveStatus } from "./save-state";
 
-type CatalogPage = { key: string; name: string; description: string | null; defaultTabs: string[]; usedBy: number };
+export type CatalogPage = { key: string; name: string; description: string | null; defaultTabs: string[]; usedBy: number };
 
 export function PagesEditor({
   projectId,
   catalog,
   initial,
+  onSaved,
 }: {
   projectId: string;
   catalog: CatalogPage[];
   initial: PageInput[];
+  onSaved: (pages: PageInput[]) => void;
 }) {
   const [pages, setPages] = useState<PageInput[]>(initial);
   const save = useSave();
@@ -83,8 +85,23 @@ export function PagesEditor({
 
       <div className="mt-5 flex flex-wrap items-center justify-end gap-3">
         <SaveStatus {...save} />
-        <Button type="button" onClick={() => save.run(() => savePages(projectId, pages))} disabled={save.pending}>
-          <Save />
+        <Button
+          type="button"
+          disabled={save.pending}
+          onClick={() =>
+            save.run(
+              () => savePages(projectId, pages),
+              { pending: "Saving pages and tabs", done: pages.length ? `Saved ${pages.length} page${pages.length === 1 ? "" : "s"} and their tabs` : "Pages saved" },
+              (r) => {
+                if (r.pages) {
+                  setPages(r.pages);
+                  onSaved(r.pages);
+                }
+              },
+            )
+          }
+        >
+          {save.pending ? <Loader2 className="animate-spin" /> : <Save />}
           Save pages
         </Button>
       </div>

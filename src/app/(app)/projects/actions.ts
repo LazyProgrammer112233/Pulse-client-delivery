@@ -96,7 +96,26 @@ export async function addComment(projectId: string, formData: FormData) {
   revalidatePath(`/projects/${projectId}`);
 }
 
-export type ActionState = { error?: string } | undefined;
+export type ActionState = { error?: string; message?: string } | undefined;
+
+// What the status pop-up says once each lifecycle step is done
+const DONE: Record<string, string> = {
+  submit: "Submitted to Product. They've been notified.",
+  assign_owner: "Product owner saved",
+  plan: "Estimate and deadline saved",
+  to_tech: "Handed to Tech. They've been notified.",
+  to_qa: "Moved to Product QA",
+  deployed: "Marked as deployed and handed back to Product",
+  to_review: "Sent to CST for review. They've been notified.",
+  approve: "Approved. The client is live.",
+  request_changes: "Changes requested. Product has been notified.",
+  request_extra_round: "Asked Product for a third review round",
+  approve_extra_round: "Third review round approved",
+  decline_extra_round: "Third review round declined",
+  hold: "Project put on hold",
+  resume: "Project resumed",
+  cancel: "Project cancelled",
+};
 
 type Project = typeof schema.projects.$inferSelect;
 
@@ -304,7 +323,7 @@ export async function advance(projectId: string, action: string, _: ActionState,
   revalidatePath(`/projects/${projectId}`);
   revalidatePath("/dashboard");
   revalidatePath("/projects");
-  return undefined;
+  return { message: DONE[action] ?? "Done" };
 }
 
 export async function addLink(projectId: string, _: ActionState, formData: FormData): Promise<ActionState> {
@@ -323,7 +342,7 @@ export async function addLink(projectId: string, _: ActionState, formData: FormD
   });
   await logEvent({ projectId, actorId: user.id, type: "link", message: `Attached ${kind === "ado" ? "an Azure DevOps PBI" : kind === "file" ? "a file" : "a link"}: ${label || url}` });
   revalidatePath(`/projects/${projectId}`);
-  return undefined;
+  return { message: "Link attached" };
 }
 
 export async function removeLink(projectId: string, linkId: string) {

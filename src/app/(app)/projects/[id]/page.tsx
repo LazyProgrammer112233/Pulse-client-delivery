@@ -27,6 +27,7 @@ import { addComment, addLink, advance, removeLink } from "../actions";
 import { Card, CardBody, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/input";
 import { SubmitButton } from "@/components/ui/submit-button";
+import { ToastForm } from "@/components/ui/toast-form";
 import { buttonClasses } from "@/components/ui/button";
 import { Avatar } from "@/components/avatar";
 import { StatusBadge } from "@/components/projects/status-badge";
@@ -138,7 +139,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
               <History className="size-5 text-brand-500" />
             </CardHeader>
             <CardBody>
-              <form action={addComment.bind(null, project.id)} className="mb-6">
+              <ToastForm action={addComment.bind(null, project.id)} pending="Posting your comment" done="Comment posted" className="mb-6">
                 <Textarea name="body" placeholder="Add a comment for CST, Product or Tech" required maxLength={5000} />
                 <div className="mt-2 flex justify-end">
                   <SubmitButton variant="secondary" size="sm" pendingText="Posting">
@@ -146,7 +147,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                     Comment
                   </SubmitButton>
                 </div>
-              </form>
+              </ToastForm>
               <ol className="relative space-y-5 border-l border-line pl-6">
                 {timeline.map((e) => (
                   <li key={e.id} className="relative">
@@ -193,6 +194,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                   <div className="mt-3 space-y-3">
                     <ActionForm
                       action={advance.bind(null, project.id, "assign_owner")}
+                      pendingText="Saving the product owner"
                       variant="secondary"
                       fields={[
                         {
@@ -207,6 +209,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                     />
                     <ActionForm
                       action={advance.bind(null, project.id, "plan")}
+                      pendingText="Saving the estimate and deadline"
                       variant="secondary"
                       fields={[
                         { type: "number", name: "manDays", label: "Man-days", defaultValue: project.estimateManDays ?? undefined },
@@ -248,11 +251,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                           </p>
                         </div>
                         {mine && (
-                          <form action={removeLink.bind(null, project.id, link.id)}>
+                          <ToastForm action={removeLink.bind(null, project.id, link.id)} pending="Removing the link" done="Link removed">
                             <button type="submit" title="Remove link" className="rounded-lg p-1.5 text-danger-600 hover:bg-danger-50">
                               <Trash2 className="size-4" />
                             </button>
-                          </form>
+                          </ToastForm>
                         )}
                       </li>
                     );
@@ -264,6 +267,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                 <div className="mt-3">
                   <ActionForm
                     action={addLink.bind(null, project.id)}
+                    pendingText="Attaching the link"
                     variant="secondary"
                     fields={[
                       {

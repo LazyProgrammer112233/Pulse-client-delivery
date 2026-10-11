@@ -1,57 +1,43 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, AlertTriangle, Loader2 } from "lucide-react";
+import { AlertTriangle } from "lucide-react";
 import type { SaveResult } from "@/app/(app)/projects/[id]/requirement/actions";
+import { withToast } from "@/components/ui/toast";
 
 /**
- * Runs a save action and tracks its outcome for the inline status line.
- * Plain state rather than useTransition: the transition also waits for the page refresh,
- * which can leave the button spinning after the save has already finished.
+ * Runs a save action with a status pop-up and tracks unsaved edits.
+ * Saves update the editors' own state; nothing waits on a page refresh.
  */
 export function useSave() {
   const [pending, setPending] = useState(false);
-  const [result, setResult] = useState<SaveResult | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [dirty, setDirty] = useState(false);
-  const run = async (fn: () => Promise<SaveResult>, after?: (r: SaveResult) => void) => {
+  const run = async <R extends SaveResult>(fn: () => Promise<R>, msg: { pending: string; done: string }, after?: (r: R) => void) => {
     setPending(true);
-    let r: SaveResult;
-    try {
-      r = await fn();
-    } catch {
-      r = { error: "Couldn't save. Check your connection and try again." };
-    }
+    setError(null);
+    const r = (await withToast(fn, msg)) as R;
     setPending(false);
-    setResult(r);
-    if (r.ok) setDirty(false);
+    if (r.error) setError(r.error);
+    else setDirty(false);
     after?.(r);
+    return r;
   };
   const markDirty = () => {
     setDirty(true);
-    setResult(null);
+    setError(null);
   };
-  return { pending, result, dirty, run, markDirty };
+  return { pending, error, dirty, run, markDirty };
 }
 
-export function SaveStatus({ pending, result, dirty }: { pending: boolean; result: SaveResult | null; dirty: boolean }) {
-  if (pending)
-    return (
-      <span className="inline-flex items-center gap-1.5 text-sm text-muted">
-        <Loader2 className="size-4 animate-spin" /> Saving
-      </span>
-    );
-  if (result?.error)
+/** Inline hint next to a save button: unsaved edits or the last error. Progress shows in the pop-up. */
+export function SaveStatus({ error, dirty }: { error: string | null; dirty: boolean }) {
+  if (error)
     return (
       <span className="inline-flex items-center gap-1.5 text-sm text-danger-600">
-        <AlertTriangle className="size-4" /> {result.error}
+        <AlertTriangle className="size-4" /> {error}
       </span>
     );
   if (dirty) return <span className="text-sm text-amber-700">Unsaved changes</span>;
-  if (result?.ok)
-    return (
-      <span className="inline-flex items-center gap-1.5 text-sm text-emerald-700">
-        <CheckCircle2 className="size-4" /> Saved
-      </span>
-    );
   return null;
 }

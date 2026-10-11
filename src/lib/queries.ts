@@ -3,6 +3,7 @@ import { and, asc, desc, eq, ilike, inArray, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
 import { db, schema } from "@/db";
 import type { ProjectStatus } from "./status";
+import { toItemRow, type Branding } from "./requirement";
 
 const owner = alias(schema.users, "owner");
 const creator = alias(schema.users, "creator");
@@ -148,26 +149,9 @@ export async function getRequirement(projectId: string) {
   ]);
   const extra = (settings?.extra ?? {}) as { addonNotes?: Record<string, string> };
   return {
-    pages: pages.map((p) => ({ pageKey: p.pageKey, name: p.name, tabs: p.tabs, notes: p.notes ?? "" })),
-    items: items.map((i) => {
-      const s = i.settings as { width?: string; colors?: string[]; configurationId?: string | null };
-      return {
-        id: i.id,
-        kind: i.kind,
-        catalogId: i.catalogId,
-        configurationId: s.configurationId ?? null,
-        title: i.title,
-        description: i.description ?? "",
-        formula: i.formula ?? "",
-        logic: i.logic ?? "",
-        pageKey: i.pageKey ?? "",
-        tab: i.tab ?? "",
-        width: s.width ?? "third",
-        chartType: i.chartType ?? "",
-        colors: s.colors ?? [],
-      };
-    }),
-    branding: (settings?.branding ?? {}) as import("./requirement").Branding,
+    pages: pages.map((p) => ({ pageKey: p.pageKey, name: p.name, tabs: Array.isArray(p.tabs) ? p.tabs : [], notes: p.notes ?? "" })),
+    items: items.map(toItemRow),
+    branding: (settings?.branding ?? {}) as Branding,
     addons: settings?.addons ?? {},
     addonNotes: extra.addonNotes ?? {},
   };

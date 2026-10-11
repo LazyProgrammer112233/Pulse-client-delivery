@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Bot, Activity, ScanEye, Sparkles, Save } from "lucide-react";
+import { Bot, Activity, ScanEye, Sparkles, Save, Loader2 } from "lucide-react";
 import { saveAddons } from "@/app/(app)/projects/[id]/requirement/actions";
 import { ADDONS, type AddonId } from "@/lib/requirement";
 import { Button } from "@/components/ui/button";
@@ -76,8 +76,18 @@ export function AddonsEditor({
       </div>
       <div className="mt-5 flex flex-wrap items-center justify-end gap-3">
         <SaveStatus {...save} />
-        <Button type="button" disabled={save.pending} onClick={() => save.run(() => saveAddons(projectId, on, notes))}>
-          <Save />
+        <Button
+          type="button"
+          disabled={save.pending}
+          onClick={() => {
+            const count = Object.values(on).filter(Boolean).length;
+            save.run(() => saveAddons(projectId, on, notes), {
+              pending: "Saving add-ons",
+              done: count ? `Saved ${count} add-on${count === 1 ? "" : "s"}` : "Saved: no add-ons selected",
+            });
+          }}
+        >
+          {save.pending ? <Loader2 className="animate-spin" /> : <Save />}
           Save add-ons
         </Button>
       </div>

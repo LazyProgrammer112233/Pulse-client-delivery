@@ -7,6 +7,7 @@ import { Nav } from "@/components/shell/nav";
 import { Avatar } from "@/components/avatar";
 import { Badge } from "@/components/ui/badge";
 import { NavProgress } from "@/components/shell/nav-progress";
+import { Toaster } from "@/components/ui/toast";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const user = await requireUser();
@@ -14,6 +15,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   return (
     <div className="flex min-h-screen bg-white">
       <NavProgress />
+      <Toaster />
       <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r border-line bg-gradient-to-b from-white to-brand-50/50 p-4 md:flex">
         <Logo className="px-2 py-1" />
         <div className="mt-8 flex-1">
