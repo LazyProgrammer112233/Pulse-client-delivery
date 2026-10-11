@@ -4,7 +4,8 @@ import { revalidatePath } from "next/cache";
 import { and, eq, ne } from "drizzle-orm";
 import { db, schema } from "@/db";
 import { requireAdmin } from "@/lib/session";
-import { isWorkEmail } from "@/lib/domain";
+import { isValidEmail, normalizeEmail } from "@/lib/domain";
+import { endAllSessions, recordAuthEvent } from "@/lib/auth";
 import type { Team } from "@/lib/teams";
 
 export type AdminState = { error?: string; ok?: string } | undefined;
@@ -13,17 +14,17 @@ const TEAM_IDS: Team[] = ["cst", "product", "tech"];
 
 export async function addUser(_: AdminState, formData: FormData): Promise<AdminState> {
   await requireAdmin();
-  const email = String(formData.get("email") ?? "").trim().toLowerCase();
+  const email = normalizeEmail(formData.get("email"));
   const name = String(formData.get("name") ?? "").trim() || null;
   const team = String(formData.get("team") ?? "") as Team;
   const isAdmin = formData.get("isAdmin") === "on";
-  if (!isWorkEmail(email)) return { error: "Use a @flick2know.com work email." };
+  if (!isValidEmail(email)) return { error: "Enter a valid email address." };
   if (!TEAM_IDS.includes(team)) return { error: "Pick a team." };
   const [existing] = await db.select().from(schema.users).where(eq(schema.users.email, email)).limit(1);
   if (existing) return { error: `${email} already has access.` };
   await db.insert(schema.users).values({ email, name, team, isAdmin });
   revalidatePath("/admin/users");
-  return { ok: `Added ${email}. They can sign in now.` };
+  return { ok: `Added ${email}. They sign up once with this email to set their password.` };
 }
 
 export async function updateUser(userId: string, formData: FormData) {
@@ -43,6 +44,27 @@ export async function updateUser(userId: string, formData: FormData) {
     patch.active = wantActive;
   }
   if (Object.keys(patch).length) await db.update(schema.users).set(patch).where(eq(schema.users.id, userId));
+  if (patch.active === false) await endAllSessions(userId, "revoked");
+  revalidatePath("/admin/users");
+}
+
+/** Clears the password and signs the person out everywhere; they register again with the same email. */
+export async function resetUserPassword(userId: string) {
+  await requireAdmin();
+  const [u] = await db
+    .update(schema.users)
+    .set({ passwordHash: null, passwordUpdatedAt: new Date() })
+    .where(eq(schema.users.id, userId))
+    .returning({ email: schema.users.email });
+  if (!u) return;
+  await endAllSessions(userId, "password_reset");
+  await recordAuthEvent("password_reset_by_admin", u.email, userId);
+  revalidatePath("/admin/users");
+}
+
+export async function signOutEverywhere(userId: string) {
+  await requireAdmin();
+  await endAllSessions(userId, "revoked");
   revalidatePath("/admin/users");
 }
 
@@ -65,6 +87,7 @@ export async function removeUser(userId: string) {
     .from(schema.comments)
     .where(eq(schema.comments.authorId, userId))
     .limit(1);
+  await endAllSessions(userId, "revoked");
   if (hasHistory || ownsSomething || commented) {
     await db.update(schema.users).set({ active: false, isAdmin: false }).where(eq(schema.users.id, userId));
   } else {

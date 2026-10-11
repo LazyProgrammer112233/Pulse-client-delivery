@@ -87,7 +87,11 @@ export default async function DashboardPage() {
     const manDays = all
       .filter((p) => ACTIVE.includes(p.status))
       .reduce((sum, p) => sum + Number(p.estimateManDays ?? 0), 0);
-    const withProduct = all.filter((p) => p.holdingTeam === "product" && p.status !== "product_assigned");
+    const withProduct = all.filter(
+      (p) =>
+        (p.holdingTeam === "product" && p.status !== "product_assigned") ||
+        (p.status === "cst_review" && p.extraRoundRequested && !p.extraRoundApprovedBy),
+    );
     return (
       <>
         <PageHeader title={`Hi ${firstName}`} description="Own client projects, estimate effort and keep deadlines honest." />
@@ -98,23 +102,23 @@ export default async function DashboardPage() {
           <StatCard label="Man-days in flight" value={manDays} icon={Timer} hint="Estimated across active projects" />
         </div>
         <Section title="Needs a product owner" rows={unassigned} empty="Every project has an owner" />
-        <Section title="With Product" rows={withProduct} empty="Nothing in configuration or QA" />
+        <Section title="With Product" rows={withProduct} empty="Nothing in estimation, configuration or QA" />
       </>
     );
   }
 
   const devQueue = all.filter((p) => p.status === "in_development");
-  const deployed = all.filter((p) => p.status === "deployed");
+  const deployed = all.filter((p) => p.status === "product_qa");
   return (
     <>
       <PageHeader title={`Hi ${firstName}`} description="Build what configuration cannot do and ship it to beta and prod." />
       <div className="grid gap-4 sm:grid-cols-3">
         <StatCard label="In development" value={devQueue.length} icon={Code2} hint="Handed to Tech by Product" />
-        <StatCard label="Deployed, awaiting QA" value={deployed.length} icon={Rocket} hint="Back with Product soon" />
+        <StatCard label="Deployed, in Product QA" value={deployed.length} icon={Rocket} hint="Product is checking it" />
         <StatCard label="Overdue" value={[...devQueue, ...deployed].filter(isOverdue).length} icon={AlarmClock} tone="red" hint="Past target date" />
       </div>
       <Section title="Assigned to Tech" rows={devQueue} empty="No development work assigned" />
-      <Section title="Deployed" rows={deployed} empty="Nothing deployed and waiting" />
+      <Section title="Deployed, in Product QA" rows={deployed} empty="Nothing waiting on Product QA" />
     </>
   );
 }

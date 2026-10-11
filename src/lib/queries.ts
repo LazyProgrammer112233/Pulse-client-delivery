@@ -25,6 +25,8 @@ export async function listProjects(filter: { statuses?: ProjectStatus[]; ownerId
       targetDate: schema.projects.targetDate,
       estimateManDays: schema.projects.estimateManDays,
       reviewRound: schema.projects.reviewRound,
+      extraRoundRequested: schema.projects.extraRoundRequested,
+      extraRoundApprovedBy: schema.projects.extraRoundApprovedBy,
       updatedAt: schema.projects.updatedAt,
       clientName: schema.clients.name,
       companyId: schema.clients.companyId,
@@ -128,4 +130,68 @@ export async function countRows() {
       (select count(*) from users where active)::int as users
   `);
   return r;
+}
+
+export async function getRequirement(projectId: string) {
+  const [pages, items, [settings]] = await Promise.all([
+    db
+      .select()
+      .from(schema.projectPages)
+      .where(eq(schema.projectPages.projectId, projectId))
+      .orderBy(asc(schema.projectPages.displayOrder)),
+    db
+      .select()
+      .from(schema.projectItems)
+      .where(eq(schema.projectItems.projectId, projectId))
+      .orderBy(asc(schema.projectItems.displayOrder)),
+    db.select().from(schema.projectSettings).where(eq(schema.projectSettings.projectId, projectId)),
+  ]);
+  const extra = (settings?.extra ?? {}) as { addonNotes?: Record<string, string> };
+  return {
+    pages: pages.map((p) => ({ pageKey: p.pageKey, name: p.name, tabs: p.tabs, notes: p.notes ?? "" })),
+    items: items.map((i) => {
+      const s = i.settings as { width?: string; colors?: string[]; configurationId?: string | null };
+      return {
+        id: i.id,
+        kind: i.kind,
+        catalogId: i.catalogId,
+        configurationId: s.configurationId ?? null,
+        title: i.title,
+        description: i.description ?? "",
+        formula: i.formula ?? "",
+        logic: i.logic ?? "",
+        pageKey: i.pageKey ?? "",
+        tab: i.tab ?? "",
+        width: s.width ?? "third",
+        chartType: i.chartType ?? "",
+        colors: s.colors ?? [],
+      };
+    }),
+    branding: (settings?.branding ?? {}) as import("./requirement").Branding,
+    addons: settings?.addons ?? {},
+    addonNotes: extra.addonNotes ?? {},
+  };
+}
+
+export type Requirement = Awaited<ReturnType<typeof getRequirement>>;
+
+export async function listCatalogPages() {
+  return db.select().from(schema.catalogPages).orderBy(desc(schema.catalogPages.usedBy));
+}
+
+export async function listTeamMembers(team: "cst" | "product" | "tech") {
+  return db
+    .select({ id: schema.users.id, name: schema.users.name, email: schema.users.email })
+    .from(schema.users)
+    .where(and(eq(schema.users.team, team), eq(schema.users.active, true)))
+    .orderBy(asc(schema.users.name));
+}
+
+export async function listLinks(projectId: string) {
+  return db
+    .select({ link: schema.links, by: schema.users.name, byEmail: schema.users.email })
+    .from(schema.links)
+    .innerJoin(schema.users, eq(schema.users.id, schema.links.addedBy))
+    .where(eq(schema.links.projectId, projectId))
+    .orderBy(desc(schema.links.createdAt));
 }

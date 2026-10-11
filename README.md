@@ -10,18 +10,23 @@ Internal portal for delivering Pulse web dashboards and the Pulse app to new cli
 | Hosting | Vercel Hobby |
 | Database | Neon Postgres free tier, through Vercel's Neon integration |
 | ORM | Drizzle (migrations in `drizzle/`) |
-| Sign-in | Auth.js with a one-time code emailed to `@flick2know.com` addresses (Microsoft 365 sign-in can be switched on later) |
-| Email | Any SMTP sender; Brevo free tier (300 emails a day) or a Gmail app password |
+| Sign-in | Email and password (scrypt hashes), database-backed sessions in an httpOnly cookie |
+| Email | Any SMTP sender for password resets and hand-off nudges; Brevo free tier or a Gmail app password |
 
-## What works today (step 1)
+## What works today
 
-- Email code sign-in: enter your work email, get a 6-digit code, type it in. Any email outside `@flick2know.com` is rejected on the server with "This email is not a work email". Codes expire after 10 minutes, work once, allow 5 tries, and at most 5 codes go out per email every 15 minutes.
-- First sign-in asks for the team (CST, Product or Tech) and opens that team's dashboard.
-- CST creates a client project: pick a Pulse company by name or company ID, or add a new client, then choose web dashboard, Pulse app or both.
-- Project page with the delivery lifecycle, activity timeline, comments, and "Assign to Product".
-- Admin: add, remove, deactivate users, change teams, make admins. Import the full Pulse company list and the KPI and chart catalog from CSV.
-
-Next: the requirement builder (pages, KPIs, charts, branding, add-ons), then the full Product and Tech workflow with email nudges.
+- **Sign up once, then log in.** Anyone can register with name, email, password and team; the form asks for a work email. Registered people log in with email and password. Wrong passwords are counted (8 in 15 minutes locks the email for 15 minutes), "Forgot password?" emails a reset code, and an admin can clear a password so the person registers again.
+- **Sessions are tracked.** Each login creates a session row; logout, a password reset or an admin revoking access ends it. Users and roles shows who is registered, who is online, last login and last logout, plus a sign-in activity log.
+- **CST** creates a client project (Pulse company or a new client, web dashboard, app or both) and lands in the requirement builder:
+  1. Pages and tabs from the Pulse page catalog
+  2. KPI cards and charts from the Pulse catalog (822 active configurations seeded) or custom, with formula, logic, page, tab, size, chart type and colors
+  3. Branding: logo upload (up to 300 KB), display name, colors, live preview
+  4. Add-ons: Pulse AI chatbot, anomaly detection, IR dashboard, product recommendation
+  5. Submit to Product
+- **Workflow** on every project page, with a "Next step" card that shows only the buttons the current person can use:
+  draft → Product assigns an owner → owner sets man-days and target date → configuring → Tech (optional) marks deployed to beta or prod → Product QA → CST review → live.
+  CST gets two review rounds; a third needs Product to approve the request. Product can pause, resume or cancel, change the owner, estimate or deadline (with a reason on the timeline), and attach Azure DevOps PBIs, files and links.
+- Every hand-off, plan change, requirement edit and comment is on the project timeline, and the receiving team gets an email nudge when SMTP is set.
 
 ## Setup
 
@@ -35,51 +40,25 @@ Next: the requirement builder (pages, KPIs, charts, branding, add-ons), then the
 
 Every Vercel build runs `npm run vercel-build`, which applies migrations, seeds the Pulse page catalog and clients, then builds the app. You never run migrations by hand.
 
-### 2. Set up email for sign-in codes (free)
+### 2. Add the environment variables in Vercel
 
-Sign-in codes go out over SMTP. Either of these is free and needs no DNS or IT admin changes.
-
-**Brevo (recommended, 300 emails a day)**
-
-1. Create a free account at [brevo.com](https://www.brevo.com).
-2. **Senders, Domains & Dedicated IPs > Senders > Add a sender** with the address the codes should come from (your own work mailbox is fine). Brevo emails that address a confirmation link; click it.
-3. **SMTP & API > SMTP** shows the server `smtp-relay.brevo.com`, port `587`, and your SMTP login. Click **Generate a new SMTP key** and copy it.
-
-**Gmail (alternative, 500 emails a day)**
-
-1. On a Google account with 2-Step Verification on, open [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords) and create an app password.
-2. Use `smtp.gmail.com`, port `587`, the Gmail address as the user and the app password as the password.
-
-Codes sent from an address that isn't on a verified domain can land in spam the first time. Ask people to mark the first email "Not spam".
-
-### 3. Add the environment variables in Vercel
-
-In **Settings > Environment Variables**, add:
+In **Settings > Environment Variables**:
 
 | Name | Value |
 | --- | --- |
-| `AUTH_SECRET` | A random string. Run `openssl rand -base64 32` or `npx auth secret` |
-| `SMTP_HOST` | `smtp-relay.brevo.com` (or `smtp.gmail.com`) |
-| `SMTP_PORT` | `587` |
-| `SMTP_USER` | Brevo SMTP login (or the Gmail address) |
-| `SMTP_PASS` | Brevo SMTP key (or the Gmail app password) |
-| `EMAIL_FROM` | `Pulse Delivery <the-sender-you-verified@...>` |
-| `ADMIN_EMAILS` | Comma-separated emails that become admins on first sign-in, for example `ishan@flick2know.com` |
+| `AUTH_SECRET` | A random string: `openssl rand -base64 32` |
+| `ADMIN_EMAILS` | Emails that become admins when they register, for example `ishan@flick2know.com` |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `EMAIL_FROM` | Optional. Needed for "Forgot password?" emails and hand-off nudges. Brevo: `smtp-relay.brevo.com`, `587`, your SMTP login and key, and a verified sender |
 
-Then **Deployments > Redeploy**. Open the site, enter your work email, and sign in with the code.
+Then **Deployments > Redeploy**.
 
-### Later: Microsoft 365 sign-in (optional)
+### 3. Make it fast: put the app next to the database
 
-Once an IT admin can register an app in Microsoft Entra ID, a "Sign in with Microsoft" button appears next to the email code as soon as these three variables are set:
+Every page reads the database several times, so the app and the database must be in the same region. Open **Users and roles** as an admin: the line under the table shows the database round trip and both regions. If the round trip is above about 50 ms, go to Vercel **Settings > Functions > Function Region** and pick the region that matches the database (for example `bom1` Mumbai for Neon `ap-south-1`, `iad1` Washington for `us-east-1`, `sin1` Singapore for `ap-southeast-1`), then redeploy.
 
-1. [portal.azure.com](https://portal.azure.com) > **Microsoft Entra ID > App registrations > New registration**, name `Pulse Delivery`, **Accounts in this organizational directory only**.
-2. Redirect URI (Web): `https://<your-vercel-domain>/api/auth/callback/microsoft-entra-id`.
-3. Create a client secret under **Certificates & secrets**.
-4. Set `AUTH_MICROSOFT_ENTRA_ID_ID` (Application ID), `AUTH_MICROSOFT_ENTRA_ID_SECRET` (secret value) and `AUTH_MICROSOFT_ENTRA_ID_ISSUER` (`https://login.microsoftonline.com/<tenant-id>/v2.0`), then redeploy.
+### 4. Load the full Pulse company list (optional)
 
-### 4. Load the full Pulse company list and catalog
-
-The seed only includes the 55 companies that already run a Pulse dashboard. To load every company and the full KPI and chart catalog, run these on `Masters_GT_Replica`, save each result as CSV, and upload them as an admin on the **Clients** and **Pulse catalog** pages.
+The seed includes the 55 companies that already run a Pulse dashboard and every active KPI and chart configuration. To load every company, or refresh the catalog, run these on `Masters_GT_Replica`, save each result as CSV, and upload them as an admin on the **Clients** and **Pulse catalog** pages.
 
 Companies:
 
@@ -116,7 +95,7 @@ npm run db:seed
 npm run dev
 ```
 
-Without `SMTP_*` set, local development prints each sign-in code in the terminal running `npm run dev` instead of emailing it. Production refuses to start a sign-in without SMTP.
+Without `SMTP_*` set, local development prints emails (password reset codes, nudges) in the terminal running `npm run dev`. In production, "Forgot password?" asks people to contact an admin instead.
 
 When you change `src/db/schema.ts`, run `npm run db:generate` and commit the new file in `drizzle/`.
 
@@ -124,14 +103,17 @@ When you change `src/db/schema.ts`, run `npm run db:generate` and commit the new
 
 ```
 src/
-  auth.ts, auth.config.ts   sign-in, domain check, user upsert
-  lib/otp.ts, lib/mailer.ts one-time email codes and SMTP sending
-  middleware.ts             sends signed-out visitors to /login
-  db/schema.ts              users, clients, projects, requirement items, comments, links, events, catalog
-  app/login, app/onboarding first sign-in flow
-  app/(app)/                dashboard, projects, clients, catalog, admin/users
+  lib/auth.ts               sessions (cookie + user_sessions table), auth event log
+  lib/auth-actions.ts       sign up, log in, log out, password reset
+  lib/password.ts           scrypt password hashing
+  lib/workflow.ts           who can do what at each stage, review round rules
+  lib/otp.ts, lib/mailer.ts reset codes and SMTP sending
+  middleware.ts             sends visitors without a session cookie to /login
+  db/schema.ts              users, sessions, auth events, clients, projects, requirement, comments, links, events, catalog
+  app/login, app/signup, app/forgot-password, app/onboarding
+  app/(app)/                dashboard, projects (+ requirement builder), clients, catalog, admin/users
   components/               UI kit (button, card, badge, inputs), shell, project widgets
-scripts/seed.ts             Pulse pages and clients that already run Pulse
+scripts/seed.ts             Pulse pages, clients that already run Pulse, and the KPI/chart catalog (pulse-catalog.json)
 ```
 
 ## Theme

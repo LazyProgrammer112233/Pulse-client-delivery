@@ -1,0 +1,6578 @@
+[
+{
+"kind": "chart",
+"configurationId": "activeInactiveOutlets254783",
+"title": "ActiveInactiveOutlets",
+"description": "ActiveInactiveOutlets",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "activeInactiveOutlets254783CityWise",
+"title": "ActiveInactiveOutlets",
+"description": "ActiveInactiveOutlets",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "activeInactiveOutlets254783OutletWise",
+"title": "Productivity Percentage Outlet Wise",
+"description": "Productivity Percentage Outlet Wise",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "activeInactiveOutletsBongchieV1",
+"title": "Active vs Inactive Outlets",
+"description": "Outlet product activity in the last 30 days: green active, red inactive",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "activeInactiveOutletsBongchieV1OutletWise",
+"title": "Active vs Inactive Outlets",
+"description": "Outlet product activity in the last 30 days: green active, red inactive",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "activeUserTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "activeUserTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "activeUserTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AttendanceStatusBreakdown",
+"title": "Attendance Status Breakdown",
+"description": "Distribution by work status",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "attendanceStatusBreakdown1",
+"title": "Attendance Status Breakdown1",
+"description": "Distribution by work status",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgCallStartTimeTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgCallStartTimeTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgCallStartTimeTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgDayEndTimeTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgDayEndTimeTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgDayEndTimeTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "avgOutletThroughputTrendDaily",
+"title": "Average Output Throughput Trend",
+"description": "Average Output Throughput Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "avgOutletThroughputTrendWeekly",
+"title": "Average Outlet Throughput Trend",
+"description": "Average Outlet Throughput Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgRetailingTimeDailyTrend",
+"title": "Avg Retailing Time",
+"description": "Avg Retailing Time Daily Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgRetailingTimeMonthlyTrend",
+"title": "Avg Retailing Time",
+"description": "Avg Retailing Time Monthly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "AvgRetailingTimeWeeklyTrend",
+"title": "Avg Retailing Time",
+"description": "Avg Retailing Time Weekly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "avgVisitPerUserTrendDaily",
+"title": "Avg Visit Per User Trend",
+"description": "Avg Visit Per User Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "avgVisitPerUserTrendMonthly",
+"title": "Avg Visit Per User Trend",
+"description": "Avg Visit Per User Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "avgVisitPerUserTrendWeekly",
+"title": "Avg Visit Per User Trend",
+"description": "Avg Visit Per User Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "closingStockTrendDaily",
+"title": "Closing Stock Trend",
+"description": "Closing Stock Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "closingStockTrendMonthly",
+"title": "Closing Stock Trend",
+"description": "Closing Stock Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "closingStockTrendWeekly",
+"title": "Closing Stock Trend",
+"description": "Closing Stock Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "CoverageBreakdown",
+"title": "Coverage Breakdown",
+"description": "Coverage analysis by visit status",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "coveragePercentage",
+"title": "coveragePercentage",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "coveragePercentageCityWise",
+"title": "coveragePercentageCityWise",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "coverageTrendDaily",
+"title": "Outlet Coverage Trend",
+"description": "Outlet Coverage Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "CoverageTrendDailyNew",
+"title": "Coverage%",
+"description": "Coverage% Trend Daily",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "coverageTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "CoverageTrendMonthlyNew",
+"title": "Coverage % Monthly",
+"description": "Coverage % Trend Monthly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "coverageTrendWeekly",
+"title": "Outlet Coverage Trend",
+"description": "Outlet Coverage Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "CoverageTrendWeeklyNew",
+"title": "Coverage % Weekly",
+"description": "Coverage % Trend Weekly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "DropsizeMonthlyChart",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "DropsizeMonthlyVivo",
+"title": "Dropsize",
+"description": "Dropsize Monthly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "dropSizeTrendDaily",
+"title": "Drop Size Trend",
+"description": "Drop Size Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "DropSizeTrendDailyVivo",
+"title": "Drop Size Trend",
+"description": "Drop Size Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "dropSizeTrendWeekly",
+"title": "Drop Size Trend",
+"description": "Drop Size Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "DropsizeWeeklyvivo",
+"title": "Dropsize",
+"description": "Dropsize Weekly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "IRLiveImages",
+"title": "IR Live Images",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "IRMasterIconImages",
+"title": "IR Master SKUs",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "last7DaysTrend",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "LPPCTrendvivoMonthly",
+"title": "LPPC",
+"description": "LPPC Monthly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "LPPCTrendvivoWeekly",
+"title": "LPPC",
+"description": "LPPC Weekly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "newOutlets",
+"title": "newOutlets",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "newOutletsCityWise",
+"title": "newOutletsCityWise",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "Nippo193014BeatOutletMapping",
+"title": "NIPPO Outlets by Beat",
+"description": "Mapped outlet count by selected beat using EmployeeJourneyDetail without the broken LocationMaster OutletId join.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "Nippo193014TimeBucketSales",
+"title": "NIPPO Sales by Two-Hour Bucket",
+"description": "Secondary invoice value grouped into two-hour invoice-time buckets.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "openingStockTrendDaily",
+"title": "Opening Stock Trend",
+"description": "Opening Stock Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "openingStockTrendMonthly",
+"title": "Opening Stock Trend",
+"description": "Opening Stock Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "openingStockTrendWeekly",
+"title": "Opening Stock Trend",
+"description": "Opening Stock Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "OrderVsInvoice",
+"title": "Order vs Invoice",
+"description": "Fill Rate Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PC",
+"title": "Productive Calls (PC)",
+"description": "Calls that resulted in outcomes",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "penetrationPercentage",
+"title": "penetrationPercentage",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "penetrationPercentageCityWise",
+"title": "penetrationPercentageCityWise",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "penetrationTrendDaily",
+"title": "Outlet Penetration Trend",
+"description": "Outlet Penetration Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PenetrationTrendDailyNew",
+"title": "Penetration%",
+"description": "Penetration % Trend Daily",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "penetrationTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PenetrationTrendMonthlyNew",
+"title": "Penetration % Monthly",
+"description": "Penetration % Trend Monthly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "penetrationTrendWeekly",
+"title": "Outlet Penetration Trend",
+"description": "Outlet Penetration Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PenetrationtrendWeeklyNew",
+"title": "Penetration % Weekly",
+"description": "Penetration % Trend Weekly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PresentPercentTrendDailyNew",
+"title": "Present%",
+"description": "Present% Trend Daily",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PresentPercentTrendWeeklyNew",
+"title": "Present % Weekly",
+"description": "Present % Trend Weekly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PresentTrendMonthlyNew",
+"title": "Present % Monthly",
+"description": "Present % Trend Monthly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primaryReturnsTrendDaily",
+"title": "Secondary Returns Trend",
+"description": "Secondary Returns Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primaryReturnsTrendMonthly",
+"title": "Primary Returns Trend",
+"description": "Primary Returns Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primaryReturnsTrendWeekly",
+"title": "Primary Returns Trend",
+"description": "Primary Returns Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primarySalesTrendDaily",
+"title": "Primary Sales Trend",
+"description": "Primary Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primarySalesTrendMonthly",
+"title": "Primary Sales Trend",
+"description": "Primary Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primarySalesTrendWeekly",
+"title": "Primary Sales Trend",
+"description": "Primary Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primaryTrendDaily",
+"title": "Primary Order v/s Sales Trend",
+"description": "Primary Order v/s Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primaryTrendMonthly",
+"title": "Primary Order v/s Sales Trend",
+"description": "Primary Order v/s Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "primaryTrendWeekly",
+"title": "Primary Order v/s Sales Trend",
+"description": "Primary Order v/s Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "PrimaryVsSecondary",
+"title": "Primary vs Secondary",
+"description": "Sales Channel Performance",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productAvailableOutletsBongchieV2",
+"title": "Product Available Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productAvailableOutletsBongchieV2CityWise",
+"title": "Product Available Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productAvailableOutletsBongchieV2OutletWise",
+"title": "Product Available Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productivityPercentage",
+"title": "productivityPercentage",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productivityPercentageCityWise",
+"title": "productivityPercentageCityWise",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productivityPercentageOutletWise",
+"title": "Productivity Percentage Outlet Wise",
+"description": "Productivity Percentage Outlet Wise",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productMissingOutletsBongchieV2",
+"title": "Product Missing Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productMissingOutletsBongchieV2CityWise",
+"title": "Product Missing Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productMissingOutletsBongchieV2OutletWise",
+"title": "Product Missing Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ProductPenetrationPercentage",
+"title": "Product Penetration %",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productPenetrationPercentageBongchieV2",
+"title": "Product Penetration %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productPenetrationPercentageBongchieV2CityWise",
+"title": "Product Penetration %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "productPenetrationPercentageBongchieV2OutletWise",
+"title": "Product Penetration %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ProductPenetrationPercentageCityWise",
+"title": "Product Penetration %",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "RouteAderenceweeklyVivo",
+"title": "Route Adherence Trend Weekly",
+"description": "Route Adherence Trend Weekly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "RouteAdherenceMonthlyVivo",
+"title": "Route Adherence Monthly Trend",
+"description": "Route Adherence Monthly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "RouteAdherenceVivo",
+"title": "Route Adherence 7 Day Trend",
+"description": "Route Adherence 7 Day Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "RouteAdherencevivoWeekly",
+"title": "Route Adherence",
+"description": "Route Adherence Weekly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "SalesComparison",
+"title": "Sales Comparison",
+"description": "MTD vs LMTD vs YTD",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "SalesProgressToTarget",
+"title": "Progress to Target",
+"description": "This chart is now defined at card level with multiQuery support",
+"chartType": "ProgressBar",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "SalesTrend",
+"title": "Sales Trend",
+"description": "Month-on-Month Performance",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "salesTrendHourly",
+"title": "Calls & Productivity Trend",
+"description": "Calls & Productivity Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "salesTrendWeekly",
+"title": "Calls & Productivity Trend",
+"description": "Calls & Productivity Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "salesValue",
+"title": "salesValue",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "salesValueCityWise",
+"title": "salesValueCityWise",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondaryReturnsTrendDaily",
+"title": "Secondary Returns Trend",
+"description": "Secondary Returns Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondaryReturnsTrendMonthly",
+"title": "Secondary Returns Trend",
+"description": "Secondary Returns Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondaryReturnsTrendWeekly",
+"title": "Secondary Returns Trend",
+"description": "Secondary Returns Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondarySalesTrendDaily",
+"title": "Secondary Sales Trend",
+"description": "Secondary Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondarySalesTrendMonthly",
+"title": "DropSize Monthly",
+"description": "DropSize Monthly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondarySalesTrendWeekly",
+"title": "Secondary Sales Trend",
+"description": "Secondary Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondaryTrendDaily",
+"title": "Secondary Order v/s Sales Trend",
+"description": "Secondary Order v/s Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondaryTrendMonthly",
+"title": "Secondary Order v/s Sales Trend",
+"description": "Secondary Order v/s Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "secondaryTrendWeekly",
+"title": "Secondary Order v/s Sales Trend",
+"description": "Secondary Order v/s Sales Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "skuAvailabilityPercentageBongchieV2",
+"title": "SKU Availability %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "skuAvailabilityPercentageBongchieV2CityWise",
+"title": "SKU Availability %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "skuAvailabilityPercentageBongchieV2OutletWise",
+"title": "SKU Availability %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "stateCoveragePercentageBongchieV2",
+"title": "Coverage %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "stateCoveragePercentageBongchieV2CityWise",
+"title": "Coverage %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "stateCoveragePercentageBongchieV2OutletWise",
+"title": "Coverage %",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "StockMovementAnalysis",
+"title": "Primary vs Secondary",
+"description": "Sales Channel Performance",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "targetsTrendWeekly",
+"title": "Target KL",
+"description": "Target KL Weekly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TC",
+"title": "TC",
+"description": "TC",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ThroughputTrendMonthly",
+"title": "Throughput Monthly",
+"description": "Throughput Trend Monthly",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ThroughputTrendWeekly",
+"title": "Throughput weekly",
+"description": "ThroughPut Weekly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ThroughputVivoDaily",
+"title": "Throughput",
+"description": "Throughput 7 Days Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TopPerformingStates",
+"title": "Top Performing States",
+"description": "Top 5 Performing States.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TopSellingSkus",
+"title": "Top Selling SKUs",
+"description": "Product Performance",
+"chartType": "PieChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalActiveOutletsTrendDaily",
+"title": "Outlet Mapping Trend",
+"description": "Outlet Mapping Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalActiveOutletsTrendWeekly",
+"title": "Outlet Mapping Trend",
+"description": "Outlet Mapping Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalBeatTrendDaily",
+"title": "Beat Mapping Trend",
+"description": "Beat Mapping Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalBeatTrendWeekly",
+"title": "Beat Mapping Trend",
+"description": "Beat Mapping Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalCallsTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalCallsTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalCallsTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalGrnTrendDaily",
+"title": "GRN Trend",
+"description": "GRN Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalGrnTrendMonthly",
+"title": "GRN Trend",
+"description": "GRN Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalGrnTrendWeekly",
+"title": "GRN Trend",
+"description": "GRN Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalOrderQtyTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalOrderQtyTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalOrderQtyTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalOrderValueTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalOrderValueTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalOrderValueTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalOutlets",
+"title": "totalOutlets",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalOutletsCityWise",
+"title": "totalOutletsCityWise",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalPCTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalPCTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "TotalPCTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalsalesmen",
+"title": "Total Salesmen",
+"description": "Count of total workforce",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "totalsalesmencitywise",
+"title": "Total Salesmen",
+"description": "Count of total workforce city wise",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ubopercentageTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ubopercentageTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "ubopercentageTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "uboTrendDaily",
+"title": "UBO Trend",
+"description": "UBO Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "uboTrendMonthly",
+"title": "UBO Trend",
+"description": "UBO Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "uboTrendWeekly",
+"title": "UBO Trend",
+"description": "UBO Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "upcTrendPercentageDaily",
+"title": "UPC Trend",
+"description": "UPC Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "upcTrendPercentageMonthly",
+"title": "UPC Trend",
+"description": "UPC Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "upcTrendPercentageWeekly",
+"title": "UPC Trend",
+"description": "UPC Trend",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "userHeatMap",
+"title": "userHeatMap",
+"description": null,
+"chartType": null,
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "utilizedSchemeTrendDaily",
+"title": "Utilized Scheme Trend",
+"description": "Utilized Scheme Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "utilizedSchemeTrendMonthly",
+"title": "Utilized Scheme Trend",
+"description": "Utilized Scheme Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "utilizedSchemeTrendWeekly",
+"title": "Utilized Scheme Trend",
+"description": "Utilized Scheme Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "volumeSuperUnits",
+"title": "Volume Super Units",
+"description": "Volume in Super Units 7 Days Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "volumeSuperUnitsTrendMonthly",
+"title": "Volume KL",
+"description": "Volume KL Monthly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "volumeSuperUnitsTrendWeekly",
+"title": "Volume KL",
+"description": "Volume KL Weekly Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "workStatusTrendDaily",
+"title": "Last 7 Days Trend",
+"description": "Last 7 Days Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "workStatusTrendMonthly",
+"title": "Last 3 Month Trend",
+"description": "Last 3 Month Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "chart",
+"configurationId": "workStatusTrendWeekly",
+"title": "Last 4 Weeks Trend",
+"description": "Last 4 Weeks Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "10177salesVsReturnsDimensionComposite",
+"title": "Sales vs Returns Analysis",
+"description": "Sales vs Returns Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "10177SecSalesSFAOrderDMSInvoice",
+"title": "Secondary Order v/s Invoice",
+"description": "Secondary Order Value v/s Invoice Value",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "193004distributionOnSalesForce",
+"title": "Distribution on Salesforce",
+"description": "Distribution on Salesforce",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "193004SalesOrderQuantity",
+"title": "Sales vs Returns Analysis",
+"description": "Sales vs Returns Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "193004salesVsReturnsDimensionComposite",
+"title": "Sales vs Returns Analysis",
+"description": "Sales vs Returns Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "213572SuperUnitQuantityAnalysis",
+"title": "Quantity Analysis",
+"description": "Quantity Analysis in Kgs (Super Units)",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "213572SuperUnitQuantityAnalysisWithTCPCandOrder",
+"title": "Quantity Analysis",
+"description": "Quantity Analysis in Kgs (Super Units)",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821ECODetailComposite",
+"title": "ECO Count",
+"description": "Total ECO count analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821ECODetailCompositeSlim",
+"title": "ECO Count (Slim)",
+"description": "Slim composite: 3 sources merged into 233821ECODetailCompositeBundle",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821LCDetailComposite",
+"title": "LC Count",
+"description": "Total LC count analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821LCDetailCompositeSlim",
+"title": "LC Count (Slim)",
+"description": "Slim composite: 3 sources merged into 233821LCDetailCompositeBundle",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821OrderCountDetailComposite",
+"title": "Order Count",
+"description": "Total order count analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821OrderCountDetailCompositeSlim",
+"title": "Order Count (Slim)",
+"description": "Slim composite: 3 sources merged into 233821OrderCountDetailCompositeBundle",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821PriSaleDetailComposite",
+"title": "Primary Sales Analysis",
+"description": "Detailed Analysis of Primary Sales",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821PriSaleDetailCompositeSlim",
+"title": "Primary Sales Analysis (Slim)",
+"description": "Slim composite: 3 sources merged into 233821PriSaleDetailCompositeBundle",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821SecSaleDetailComposite",
+"title": "Secondary Sales Analysis",
+"description": "Detailed Analysis of Secondary Sales",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "233821SecSaleDetailCompositeSlim",
+"title": "Secondary Sales Analysis (Slim)",
+"description": "Slim composite: 3 sources merged into 233821SecSaleDetailCompositeBundle",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "234191MonthlySummaryComposite",
+"title": "Monthly Summary",
+"description": "Monthly Summary Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "234191OutletClassificationComposite",
+"title": "Outlet Classification",
+"description": "Outlet Classification Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "234191SalesOrderInvoiceSumUp",
+"title": "Sales Analysis",
+"description": "Secondary Sales Order & Invoice Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "234455outletanalysis",
+"title": "Outlet Chart",
+"description": "Active (Visited) vs Assigned Outlet Chart",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "244696SKUPerformance",
+"title": "SKU Analytics",
+"description": "Tracks SKU contribution and movement",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "BilledOutletCompositeLotte",
+"title": "Outlet Activation Metrics",
+"description": "Outlet Activation Metrics",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "CustomerFacinTimeNewVivo",
+"title": "Customer Facing Time",
+"description": "Customer Facing Time",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "CustomerFacinTimeNewVivoSlim",
+"title": "Customer Facing Time (Slim)",
+"description": "Slim composite: EDP sources merged into CustomerFacinTimeEdpBundle; Trino CFT source kept separate",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "distributionOnSalesForce",
+"title": "Distribution on Salesforce",
+"description": "Distribution on Salesforce",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "dropsizeVivo",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "DropsizeVivoSingle",
+"title": "Sales Analysis",
+"description": "Shared sources with dropsizeVivoSlim: dropsizeVivoSdsBundle + dropsizeVivoEdpBundle",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "dropsizeVivoSlim",
+"title": "Sales Analysis (Slim)",
+"description": "Slim: 5 sources -> dropsizeVivoSdsBundle + dropsizeVivoEdpBundle + VolumeDimension_Vivo",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "HellTargetVsAchievement",
+"title": "Target Vs Achievement",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "MarketTrendDistributionNew",
+"title": "Market Trend Distribution",
+"description": "Market Trend Distribution",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "Nippo193014OutletCoverageComposite",
+"title": "NIPPO Market Coverage",
+"description": "Productive/order-positive distinct outlets divided by planned/scheduled distinct outlets.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "Nippo193014PrimaryVsSecondary",
+"title": "NIPPO Primary vs Secondary Sales",
+"description": "Distributor-wise comparison of primary and secondary sales value, volume, and invoice count.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "orderVsSalesDimensionComposite",
+"title": "Order vs Sales Analysis",
+"description": "Order vs Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "orderVsSalesDimensionCompositeVivo",
+"title": "Order vs Sales Analysis",
+"description": "Order vs Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "outletCoverage",
+"title": "Coverage Trend",
+"description": "Coverage Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "outletCoverage1",
+"title": "Coverage Trend",
+"description": "Coverage Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "outletPenetration",
+"title": "Penetration Trend",
+"description": "Penetration Trend",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "outletWaterfallComposite",
+"title": "Customer Analysis",
+"description": "Complete Customer Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "PR_IDByDemision",
+"title": "Coverage Trend",
+"description": "Coverage Trend",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "primaryOrderVsSalesDimensionComposite",
+"title": "Primary Order vs Sales Analysis",
+"description": "Primary Order vs Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "primaryVsSecondaryReturnsDimensionComposite",
+"title": "Primary Sales vs Return Analysis",
+"description": "Primary Sales vs Return Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "primaryVsSecondarySalesDimensionComposite",
+"title": "Secondary Order vs Sales",
+"description": "Secondary Order vs Sales",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "PRPushedVsBookedComparison",
+"title": "PR Pushed Vs Booked",
+"description": "PR Pushed Vs Booked",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "recommendationoutletcomposite",
+"title": "Coverage Trend",
+"description": "Coverage Trend",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "RouteAdherenceVivoPercentage",
+"title": "Route Adherence %",
+"description": "Route Adherence %",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "SalesComparison",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "SalesDimensionVivo",
+"title": "Sell-Out Vs Sell-In Analysis",
+"description": "Sell-Out Vs Sell-In Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "salesEfficiencyComposite",
+"title": "Sales Efficiency",
+"description": "Sales Efficiency",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "salesVsReturnsDimensionComposite",
+"title": "Sales vs Returns Analysis",
+"description": "Sales vs Returns Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "salesVsReturnsDimensionCompositeVivo",
+"title": "Sales vs Returns Analysis",
+"description": "Sales vs Returns Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "Targetandsalesvivo",
+"title": "Target vs Achievement",
+"description": "Sellout & Target",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "targetVsAchievementVivo",
+"title": "Target vs Achievement",
+"description": "Target vs Achievement",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "TopFiveStatesSalesCallsComposite",
+"title": "Top 5 States: Sales and Calls",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "TopPerformingStatesCompositeBongchie",
+"title": "Top Performing States",
+"description": "Top 5 states by Order Net Value",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "TotalProductivityKPIsComposite",
+"title": "Total Productivity KPIs",
+"description": "Total Productivity KPIs",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "TotalProductivityKPIsCompositeAll",
+"title": "Total Productivity KPIs",
+"description": "Total Productivity KPIs",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "TotalProductivityKpisTableSlim",
+"title": "Total Productivity KPIs (Slim)",
+"description": "3-source slim composite: EDP bundle + SDS UTC/UPC + CapCall",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "VisitedVsPendingComparison",
+"title": "Visited Vs Pending Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "VivoCompositeCombi1_Sales_Drop_Through",
+"title": "ThroughPut",
+"description": "ThroughPut",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "Vivowork_present_holi_absent",
+"title": "User Working Analysis",
+"description": "User Working Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "composite_chart",
+"configurationId": "Vivowork_present_holi_absentSlim",
+"title": "User Working Analysis (Slim)",
+"description": "Slim composite: 5 sources merged into Vivowork_present_holi_absentBundle",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177CoverageTrend",
+"title": "Coverage Trend",
+"description": "Coverage Trend breakdown_SUM(UTC)",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177MarketTimeDistribution",
+"title": "Market Time Distribution",
+"description": "Market time distribution breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177ProductivityTrend",
+"title": "Productivity Trend",
+"description": "Productivity Trend breakdown_SUM(UPC)",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177SalesInvoice",
+"title": "Sales Invoice Analysis",
+"description": "DMS Sales Invoice Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177SalesInvoiceBar",
+"title": "Sales Invoice Analysis",
+"description": "DMS Sales Invoice Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177SchemeAnalysis",
+"title": "Scheme Analysis",
+"description": "Scheme snalysis breakdown on 2 different scheme type",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177SecondaryOrder",
+"title": "SFA Sales Order",
+"description": "SFA Sales Order Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177SecondaryOrderBar",
+"title": "SFA Sales Order",
+"description": "SFA Sales Order Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "10177SecondaryOrderTrend",
+"title": "SFA Sales Order",
+"description": "SFA Sales Order Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "11417RecommendedOutletsNew",
+"title": "Recommended outlets",
+"description": "Recommended outlets for the product",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "182458FieldUserDayDetails",
+"title": "Filed User Details",
+"description": "Filed User Call Details",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "182458TargetvsAchievementUserWiseLineCut",
+"title": "Target v/s Achievement",
+"description": "Trend Analysis between given target quantity and achieved quantity",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "182458TargetvsAchievementUserWiseProductiveCallsTarget",
+"title": "Target v/s Achievement",
+"description": "Trend Analysis between given target quantity and achieved quantity",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004avgVisitedOutletCharts",
+"title": "Visited Outlets",
+"description": "Visited Outlets",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004CoverageTrend",
+"title": "Coverage Trend",
+"description": "Coverage Trend breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004orderDimension",
+"title": "Order Analysis",
+"description": "Order Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004orderDimensionvolume",
+"title": "Order Analysis",
+"description": "Order Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004PenetrationTrend",
+"title": "Penetration Trend",
+"description": "Penetration Trend breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004returnsDimension",
+"title": "Return Analysis",
+"description": "Return Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004SalesvsMustSell",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004SecondarySalesOrder",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004SecondarySalesOrderMustSell",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004SecondarySalesQunatity",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193004UTCUPCVivoKPIs",
+"title": "UTC UPC",
+"description": "UTC UPC",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193054REDExecutionKPIs",
+"title": "RED KPIS",
+"description": "Red KPIS",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193054REDIRKPIs",
+"title": "IR KPIs",
+"description": "Red IR KPIs",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "193054REDSuccessful Audit",
+"title": "Successful Audit",
+"description": "Successful Audit",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "213572invoiceinsuperunit",
+"title": "Sales Qty Super Unit Analysis",
+"description": "Sales Analysis ( Qty in super unit + cancelled invoice + pending invoice )",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "213572orderinsuperunit",
+"title": "Order Qty Super Unit Analysis",
+"description": "Order Analysis (super unit ) + expired + short closed",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "213572ProductCategoryQuantityInSuperUnit",
+"title": "Product Category Analysis",
+"description": "Product Category Analysis in terms of quantity",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "213572ProductDivisionQuantityInSuperUnit",
+"title": "Product Division Analysis",
+"description": "Product Division Analysis in terms of quantity",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821ECOCountL3M",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821ECOCountLM",
+"title": "Secondary Sales Analysis",
+"description": "Secondary Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821ECOCountMTD",
+"title": "ECO Analysis MTD",
+"description": "ECO Analysis MTD",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821ECODetailCompositeBundle",
+"title": "ECO Count (bundled metrics)",
+"description": "Auto-bundle of 3 same-table sources for slim composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821LCCountL3M",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821LCCountLM",
+"title": "Secondary Sales Analysis",
+"description": "Secondary Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821LCCountMTD",
+"title": "ECO Analysis MTD",
+"description": "ECO Analysis MTD",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821LCDetailCompositeBundle",
+"title": "LC Count (bundled metrics)",
+"description": "Auto-bundle of 3 same-table sources for slim composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821OrderCountDetailCompositeBundle",
+"title": "Order Count (bundled metrics)",
+"description": "Auto-bundle of 3 same-table sources for slim composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821OrderCountL3M",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821OrderCountLM",
+"title": "Order Count MTD",
+"description": "Order Count MTD",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821OrderCountMTD",
+"title": "Order Count MTD",
+"description": "Order Count MTD",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821PriL3MSales",
+"title": "Primary Sales Analysis",
+"description": "Primary Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821PriL3MSalesDynamic",
+"title": "Primary Sales Analysis",
+"description": "Primary Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821PriLMSales",
+"title": "Primary Sales Analysis",
+"description": "Primary Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821PriMTDSales",
+"title": "Primary Sales Analysis",
+"description": "Primary Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821PriSaleDetailCompositeBundle",
+"title": "Primary Sales Analysis (bundled metrics)",
+"description": "Auto-bundle of 3 same-table sources for slim composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821SecLMSaleDetail",
+"title": "Secondary Sales Analysis",
+"description": "Secondary Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821SecSaleDetailCompositeBundle",
+"title": "Secondary Sales Analysis (bundled metrics)",
+"description": "Auto-bundle of 3 same-table sources for slim composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821SecSalesL3M",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "233821SecSalesMTD",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234091salesDimension",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234191orderDimension",
+"title": "Order Analysis",
+"description": "Order Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234191OutletClassification",
+"title": "Monthly Summary",
+"description": "Monthly summary + Outlet count on various conditions",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234191OutletUniverse",
+"title": "Monthly Summary",
+"description": "Monthly summary + Outlet count on various conditions",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234191Retailingdaysandhours",
+"title": "Call Trend_EDP",
+"description": "Productivity breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234304WorkingJointWorking",
+"title": "Total Working Days",
+"description": "Working Days",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234455AttendanceTrend",
+"title": "Attendance Trend",
+"description": "Attendance Breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234455DayStartTimeDistribution",
+"title": "Day Start Time Distribution",
+"description": "Unique regular user-days by recorded day-start hour",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "234455RetailingHoursDistribution",
+"title": "Retailing Hours Distribution",
+"description": "Average retailing hours per field user",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696AchievementPercentage",
+"title": "Achievement%",
+"description": "Achievement%",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696Bottom5",
+"title": "Sales Trends",
+"description": "Trend analysis across selected perspective",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696ConversionProductivity",
+"title": "PC v/s TC",
+"description": "Productivity breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696ConversionProductivityVNew",
+"title": "Salesman Productivity",
+"description": "Productivity breakdown of Salesman",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696FulFilmentChart",
+"title": "Fulfillment",
+"description": "Tracks order fulfillment efficiency",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696FulFilmentChartNew",
+"title": "Fulfillment_SI",
+"description": "Tracks order fulfillment efficiency",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696ordersByDimension",
+"title": "Order Analysis",
+"description": "Order breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696ordersByDimension_Cooler",
+"title": "Order Analysis",
+"description": "Order breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696PCv/sTC",
+"title": "PC v/s TC",
+"description": "PC v/s TC",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696PCvsTC",
+"title": "PC v/s TC",
+"description": "Productivity breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696ProductivityeByDimension",
+"title": "Call Trend",
+"description": "Productivity breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696SalesmanProductivity",
+"title": "Salesman Productivity",
+"description": "Ranks sales users based on productivity KPIs",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696SalesTrendAnalysis",
+"title": "Sales Trends",
+"description": "Trend analysis across selected perspective",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696SecondaryOrdervsdispatched",
+"title": "Fulfillment_SI",
+"description": "Tracks order fulfillment efficiency",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696SKUVAnalytics",
+"title": "SKU Analytics",
+"description": "Tracks SKU contribution and movement",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696TargetvsAchievement",
+"title": "Target v/s Achievement",
+"description": "Trend Analysis between given target quantity and achieved quantity",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "244696Top5",
+"title": "Sales Trends",
+"description": "Trend analysis across selected perspective",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783AttendanceByDimension",
+"title": "Attendance Trend",
+"description": "Attendance breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783Low5",
+"title": "7-Day Rolling Low Order Net Value",
+"description": "Trend analysis across selected perspective",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783MarketTrendByDimension",
+"title": "Market Trend : Bongchie",
+"description": "Market trend breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783ordergeneratingoutlets",
+"title": "Order Analysis",
+"description": "Order breakdown",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783Top5",
+"title": "7-Day Rolling Order Net Value",
+"description": "Seven-day rolling Order Net Value by Region. Select Geography to view regions.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783Top5Daily",
+"title": "7-Day Rolling Order Net Value",
+"description": "Seven-day rolling Order Net Value by Region. Select Geography to view regions.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783Top5Monthly",
+"title": "Monthly-to-Date Order Net Value",
+"description": "Monthly-to-date Order Net Value by Region. Select Geography to view regions.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783Top5PerformingStatesProductivity",
+"title": "Top 5 Performance",
+"description": "Top five results by the selected View By using Productive Calls (PC) and Order Net Value.",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "254783Top5Quarterly",
+"title": "Quarter-to-Date Order Net Value",
+"description": "Quarter-to-date Order Net Value by Region. Select Geography to view regions.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AchievementPercentage",
+"title": "Achievement%",
+"description": "Achievement%",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AttendanceByDimension",
+"title": "Attendance Trend",
+"description": "Attendance breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AttendanceByDimension1",
+"title": "Attendance Trend",
+"description": "Attendance breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AttendanceByDimensionBongchie",
+"title": "Attendance Trend",
+"description": "Attendance breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AttendanceByDimensionDaily",
+"title": "Attendance Trend",
+"description": "Attendance breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AttendanceByDimensionLive",
+"title": "Attendance Trend",
+"description": "Attendance breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AttendanceByDimensionMars",
+"title": "Attendance Trend",
+"description": "Attendance breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AvgOOSperStoreMars",
+"title": "Avg OOS Per Store",
+"description": "Average number of OOS SKUs per store across all active stores",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AvgOutletScore",
+"title": "Average Outlet Score Trend",
+"description": "Average of all asset scores at the outlet",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AvgRetailingTimeVivo",
+"title": "Avg Retailing Time",
+"description": "Avg Retailing Time",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "AvgUnknownSKUMarsDaily",
+"title": "Avg Unknown SKU Per Image",
+"description": "Average number of unknown SKUs detected per image.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "avgVisitedOutletCharts",
+"title": "Visited Outlets",
+"description": "Visited Outlets",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "BilledOutletCyleByDate",
+"title": "Repeat Outlets",
+"description": "(From Previous Month)",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "billedOutletLotte",
+"title": "Repeat Billing in Same Month",
+"description": "Repeat Billing in Same Month",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "BilledOutletLotteNew",
+"title": "Billed Outlet Analysis",
+"description": "Billed Outlet Count & Order Net Value Analysis",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "BookedOutlets",
+"title": "Booked outlets",
+"description": "Booked outlets for the product",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "CapCallBarVivo",
+"title": "Scheduled Orders",
+"description": "Scheduled Orders Breakdown by Dimension",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "CapCallVivo",
+"title": "Scheduled Orders",
+"description": "Scheduled Orders Breakdown by Dimension",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "CoolerPurityIR",
+"title": "Cooler Purity",
+"description": "Cooler Purity Percentage",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "counterSalesVivo",
+"title": "Counter Sales",
+"description": "Counter Sales",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Coverage",
+"title": "Coverage Analysis",
+"description": "Coverage Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Coverageintergrow",
+"title": "Coverage Analysis",
+"description": "Coverage Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "CoveragePenetrationVIvo",
+"title": "Penetration & Coverage Analysis",
+"description": "Penetration & Coverage Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "CustomerFacinTimeEdpBundle",
+"title": "Customer Facing Time EDP Bundle",
+"description": "Bundled TotalUTC + AvgRetailingMins from EmployeeDayPerformance for CustomerFacinTimeNewVivoSlim",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "CustomerFacinTimeVivo",
+"title": "Customer Facing Time",
+"description": "Customer Facing Time",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "DailyOutletVisitTrend",
+"title": "Daily Outlet Visit Trend",
+"description": "Count of outlets visited daily",
+"chartType": "LineChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "DayStartTimeMarsDaily",
+"title": "Day Start TIme",
+"description": "Day Start Time",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "distributionOnBeat",
+"title": "Distribution on Beat",
+"description": "Distribution on BeatAvg Outlets Count Per User",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "distributionOnRoute",
+"title": "Distribution on Route",
+"description": "Distribution on Route",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "DropsizeDynamicChartVivo",
+"title": "TC",
+"description": "TC",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "dropsizeVivoEdpBundle",
+"title": "Dropsize Vivo EDP Bundle",
+"description": "Bundled TotalUTC + TotalUPC for dropsizeVivoSlim",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "dropsizeVivoSdsBundle",
+"title": "Dropsize Vivo SDS Bundle",
+"description": "Bundled SDS Volume + LPPCvivo for dropsizeVivoSlim",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "FocusedSKUCountByDimension",
+"title": "Focused SKU Analysis",
+"description": "Tracks presence of priority SKUs",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "HCCBirisOutletPerformance",
+"title": "Outlet List",
+"description": "Outlet List",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "HellAchievementStdUnitByMonth",
+"title": "Achievement",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "HellTargetStdUnitByMonth",
+"title": "Target",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "inventoryByDimension",
+"title": "Inventory Analysis",
+"description": "Inventory breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "irisGeoPerformance",
+"title": "Territory Performance",
+"description": "Territory Performance",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "irisGeoPerformance_beat",
+"title": "Territory Performance",
+"description": "Territory Performance",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "irisGeoPerformance_beatMarsGT",
+"title": "Territory Performance",
+"description": "Territory Performance",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "irisGeoPerformance_beatMarsMT",
+"title": "Territory Performance",
+"description": "Territory Performance",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "irisOutletPerformance",
+"title": "Outlet List",
+"description": "Outlet List",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "LowPerformingStatesNew",
+"title": "Low Performing States",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "LPC",
+"title": "Sales Trends",
+"description": "Trend analysis across selected perspective",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "LPCGrowthInPRBooked",
+"title": "Avg. LPC For Booked",
+"description": "Avg LPC In Base Period for PR Booked .",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "LPCGrowthInPRNotBooked",
+"title": "Avg. LPC For Not Booked",
+"description": "Avg LPC In Base Period for PR Not Booked .",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "LPPCvivo",
+"title": "LPPC",
+"description": "Lines per productive call",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ManagerWiseTotalVsVisitedOutlets",
+"title": "Manager-wise Total vs Visited Outlets",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "mappedOutletCharts",
+"title": "Mapped Outlets",
+"description": "Total Mapped Outlets Count",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "mappedRouteCharts",
+"title": "Mapped Outlets",
+"description": "Total Mapped Outlets Count",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "MarketTimeDistribution",
+"title": "Market Time Distribution",
+"description": "Market time distribution breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "MarketTrendByDimension",
+"title": "Market Trend",
+"description": "Market trend breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "MSLComplianceMars",
+"title": "Must Sell Compliance",
+"description": "% of Must-Stock List SKUs available at outlet across active stores",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "MustSellSKUCountByDimension",
+"title": "Must Sell SKU Analysis",
+"description": "Verifies all must-sell SKUs are present",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "NearExpiryStockvalueMars",
+"title": "Avg Expiry Per Store",
+"description": "Avg Value of near-expiry stock (shelf + backroom) across all active stores",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "newBilledOutlelotte",
+"title": "New Billed Outlets (First Time Billing)",
+"description": "New Billed Outlets (First Time Billing)",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Nippo193014BeatCoverage",
+"title": "NIPPO Distributors with Beats",
+"description": "Number of assigned beats by distributor with geography drill-down.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Nippo193014PrimarySales",
+"title": "NIPPO Primary Sales Source",
+"description": "Primary invoice sales by distributor, geography, product, and time.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Nippo193014SecondarySales",
+"title": "NIPPO Secondary Sales Analysis",
+"description": "Secondary invoice sales by time, product, outlet segment, distributor, and geography.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "noofdsrvivo",
+"title": "No. of DSR",
+"description": "Total Number of DSR",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "OrderbyDimensionVivo",
+"title": "Order Analysis Breakdown",
+"description": "Order breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "orderDimension",
+"title": "Order Analysis",
+"description": "Order Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ordersalesDimension",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ordersByDimension",
+"title": "Order Analysis",
+"description": "Order breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "OSAPctMars",
+"title": "OSA %",
+"description": "On Shelf Availability % aggregated at store level across all transacting stores",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "OutletChartsSD",
+"title": "Total Outlets",
+"description": "Total Outlets _ secondary demand",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "outletLifecycleByDimension",
+"title": "Outlet Lifecycle Analysis",
+"description": "Track outlet activity across dimensions",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "outletMasterVivo",
+"title": "Outlets Count",
+"description": "Active and De-active Outlets Count",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Outletperdssrvivo",
+"title": "No. of Outlet per DSR",
+"description": "No. of Outlet per DSR",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "OutletRangeCountVivo",
+"title": "Outlet Count By Volume Range",
+"description": "Outlet Count By Volume Range",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PerfectStoreChart",
+"title": "Perfect Store",
+"description": "Perfect Store Details",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PerfectStoreChartmonth",
+"title": "Perfect Store",
+"description": "Perfect Store Details",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PerfectStoreChartRule",
+"title": "Perfect Store",
+"description": "Perfect Store Details",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PerfectStoreCriteria",
+"title": "Criteria",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PLangogramComplianceMars",
+"title": "Planogram Compliance %",
+"description": "Planogram Compliance % aggregated at store level across all active stores",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PlanogramComplianceByDimension",
+"title": "Planogram Compliance Analysis",
+"description": "Measures planogram compliance",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PRBookedchart",
+"title": "PR Booked",
+"description": "PR Booked",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PremiumSkuByDimension",
+"title": "Premium Sku Analysis",
+"description": "Checks presence of premium SKUs",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "primaryOrdersalesDimension",
+"title": "Primary Sales Analysis",
+"description": "Primary Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "primaryordersDimension",
+"title": "Primary Order Analysis",
+"description": "Primary Order Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "primaryReturnsDimension",
+"title": "Primary Returns Analysis",
+"description": "Primary Returns Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "primaryReturnsDimensionNew",
+"title": "Primary Returns Analysis",
+"description": "Primary Returns Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "primarysalesDimension",
+"title": "Primary Sales Analysis",
+"description": "Primary Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ProductivityeByDimension",
+"title": "Call Trend",
+"description": "Productivity breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ProductivityeByDimensionBongchie",
+"title": "Call Trend",
+"description": "Productivity breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ProductivityeByDimensionEDP",
+"title": "Call Trend_EDP",
+"description": "Productivity breakdown",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ProductPenetrationPercentage",
+"title": "Product Penetration %",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PRPushedchart",
+"title": "PR Pushed",
+"description": "PR Pushed",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "PRRecommendationByDimension",
+"title": "Avg Outlets Count",
+"description": "Avg Outlets Count Per User",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "RecommendedOutlets",
+"title": "Recommended outlets",
+"description": "Recommended outlets for the product",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "RedHCCBirisOutletPerformance",
+"title": "Outlet List",
+"description": "Outlet List",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "RepeatProductivePercentage",
+"title": "Repeat Productive %",
+"description": "Percentage of outlets visited more than 4 times in the period",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ReprimarySalesMars",
+"title": "Primary Sales Analysis",
+"description": "Primary Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "RetailingTimeMars",
+"title": "Day Start TIme",
+"description": "Day Start Time",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "returnsDimension",
+"title": "Return Analysis",
+"description": "Return Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "salesDimension",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "schemeUtilization",
+"title": "Scheme Analysis",
+"description": "Scheme Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SCVivo",
+"title": "SC",
+"description": "SC",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SecondarySalesMars",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SecondarySalesMarsAnalysisViewby",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SecondarySalesMarsMT",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SecondarySalesMarsPrimCatMT",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SecondarySalesMarsSecCatMT",
+"title": "Sales Analysis",
+"description": "Sales Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ShareOfShelfByDimension",
+"title": "Share Of Shelf Analysis",
+"description": "Share of brand facings vs total facings",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ShareOfShelfByProductDivision",
+"title": "Share Of Shelf Analysis",
+"description": "Share of brand facings vs total facings",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ShareOfShelfByProductDivisionNew",
+"title": "Share Of Shelf Analysis",
+"description": "Share of brand facings vs total facings",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "shelfLifeAnalysis",
+"title": "Shelf Life Analysis",
+"description": "Shelf Life Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SLMGGRNDimension",
+"title": "GRN Analysis",
+"description": "GRN Analysis",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SOSPctMars",
+"title": "Share of Shelf %",
+"description": "Share of Shelf % aggregated at store level across all transacting stores",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "SubRackPLanogrmMarsMT",
+"title": "Sub Rack Planogram",
+"description": "Sub Rack Planogram Compliance",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Target_Vivo",
+"title": "Target Master",
+"description": "Target Master",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Target_Vivo2",
+"title": "Target Master",
+"description": "Target Master",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Target_VivoMOM",
+"title": "Target Master",
+"description": "Target Master",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TargetVsAchievement",
+"title": "Target Vs Achievement",
+"description": "Target Vs Achievement",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "ThroughPutDynamicChartVivo",
+"title": "PC",
+"description": "PC",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TopFiveStatesSalesCalls",
+"title": "Top Performing States",
+"description": "Top performing states productivity wise",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TopPerformingStatesNew",
+"title": "Top Performing States",
+"description": null,
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TotalAbsentDaysVivo",
+"title": "Total Absent Days",
+"description": "Total Absent Days",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TotalholidayweeklyoffVivo",
+"title": "TotalHoliday/leaves",
+"description": "Total Holiday/Leaves",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "totalOutletCharts",
+"title": "Total Outlets",
+"description": "Total Outlets",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TotalPresentDaysVivo",
+"title": "Present Days",
+"description": "Total Present Days",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TotalPresentpercentvivo",
+"title": "Present %",
+"description": "Present%",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TotalProductivityKPIs",
+"title": "Productivity KPIs",
+"description": "Productivity KPIs",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TotalvsVisitedOutlets",
+"title": "Visited vs Pending Outlets",
+"description": "Distinct visited and pending outlets by the selected View By.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Totalworkingdaysvivo",
+"title": "Total Working Days",
+"description": "Working Days",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TpkCapCallScheduledOrders",
+"title": "TPK CapCall Scheduled Orders",
+"description": "Trino CapCall for slim TPK composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TpkEdpAttendanceBundle",
+"title": "TPK EDP Attendance Bundle",
+"description": "Merged EDP productivity + attendance metrics for slim composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "TpkSdsUtcUpc",
+"title": "TPK SDS UTC/UPC",
+"description": "SDS outlet UTC/UPC for slim TPK composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "uniqueOutlets",
+"title": "Avg Outlets Count",
+"description": "Avg Outlets Count Per User",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "uniqueOutletsComparisonChart",
+"title": "Avg Outlets Count",
+"description": "Avg Outlets Count Per User",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "UTCUPCVivoKPIs",
+"title": "UTC UPC",
+"description": "UTC UPC",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "visitedOutletCharts",
+"title": "Visited Outlets",
+"description": "Visited Outlets",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "VisitedvsPendingOutlets",
+"title": "Outlet Analysis Trend",
+"description": "Outlet Trend analysis across selected perspective",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "VisitedVsPendingSKUwise",
+"title": "Visited Vs Pending Outlets",
+"description": null,
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "Vivowork_present_holi_absentBundle",
+"title": "User Working Analysis (bundled metrics)",
+"description": "Auto-bundle of 5 same-table sources for slim composite",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "VolumeDimension_Vivo",
+"title": "Sales Analysis",
+"description": "Volume KL",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "VolumeDimension_Vivo_DropThrough",
+"title": "Sales Analysis",
+"description": "Sales Volume Breakdown by Dimension",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "VolumeDimensionMOM_Vivo",
+"title": "Sales Analysis MOM",
+"description": "Volume KL",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "VolumeSuperUnitsRawDimension_Vivo",
+"title": "Sales Analysis",
+"description": "Volume KL",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "VolumeSuperUnitsRawDimension_Vivo_V2",
+"title": "Sales Analysis",
+"description": "Volume KL",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "WallShartChartGrowthPercPR",
+"title": "Wallet Share %",
+"description": "Wallet Share %",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "WiproCCMTAvgUnknownSKU",
+"title": "Avg Unknown SKU Per Image",
+"description": "Average number of unknown SKUs detected per image.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "WiproCCMTCoolerPurityIR",
+"title": "Cooler Purity",
+"description": "Cooler Purity Percentage",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "WiproCCMTIrisGeoPerformance",
+"title": "Territory Performance",
+"description": "Territory Performance",
+"chartType": "TableChart",
+"outputType": null
+},
+{
+"kind": "dynamic_chart",
+"configurationId": "WiproCCMTTotalImagesCapturedDaily",
+"title": "Images Captured Daily",
+"description": "Distinct IR images captured per day over the rolling last seven days.",
+"chartType": "BarChart",
+"outputType": null
+},
+{
+"kind": "kpi",
+"configurationId": " UniqueSC ",
+"title": "Compliance Rate %",
+"description": "Compliance Rate Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "10177BilledOutlets",
+"title": "UBO",
+"description": "Outlets where Invoice Qty > 0",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "10177closingStock",
+"title": "Closing Stock",
+"description": "Closing Stock (n-1) : shows n-1 data for live date as well",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "10177openingStock",
+"title": "Opening Stock",
+"description": "Opening Stock (n-1) : shows n-1 data for live date as well",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "10177OrdersValue",
+"title": "Total Orders Value",
+"description": "Total value of orders placed _ matches with report",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "10177PrimaryReturns",
+"title": "Primary Returns",
+"description": "Primary Returns (n-1) : gives n-1 data on live date as well",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "10177SchemePercentageDMS",
+"title": "Scheme Percentage DMS",
+"description": "Scheme Percentage DMS",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "10177SchemePercentageSFA",
+"title": "Scheme Percentage SFA",
+"description": "Scheme Percentage SFA",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "10177TotalActiveUsers",
+"title": "Total Active Users",
+"description": "Count of active users - tran DB",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "10177totalGrn",
+"title": "Total GRN",
+"description": "Total GRN (n-1) : gives n-1 data on live date too",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "10177WorkStatus",
+"title": "Work Status Distribution",
+"description": "Distribution of different work statuses - tran db",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "193004ActiveOutlet",
+"title": "Active Outlet",
+"description": "Total Active Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004AverageBillingValue",
+"title": "Average Billing Value",
+"description": "Average Billing Value",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004AvgDayStartTime",
+"title": "Avg. Day Start Time",
+"description": "Average time users start their day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004AvgOrderValue",
+"title": "Average Order Quantity",
+"description": "Average order quantity per outlet",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004Coverage",
+"title": "Coverage",
+"description": "Coverage = TC / SC",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004DropSize",
+"title": "Dropsize on Invoice",
+"description": "Dropsize on Invoice",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "193004MappedBeatsCount",
+"title": "Total Beats(UA)",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004MappedOutlets",
+"title": "Total Outlets(UA)",
+"description": "Total Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004MappedRoutesCount",
+"title": "Total Routes(UA)",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004MustSellUPC",
+"title": "UPC(MS)",
+"description": "Total number of must sell productive calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004OrdersQty",
+"title": "Total orders quantity",
+"description": "Total number of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004OrdersValue",
+"title": "Total Orders Value",
+"description": "Total value of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004OutletPenetration",
+"title": "Penetration%",
+"description": "Penetration Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004PC",
+"title": "Productive Calls (PC)",
+"description": "Calls that resulted in outcomes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004SecondaryReturns",
+"title": "Secondary Returns",
+"description": "Secondary Returns",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "193004SecondarySales",
+"title": "Secondary Sales",
+"description": "Revenue from distributors to retailers",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "193004TC",
+"title": "Total Calls (TC)",
+"description": "Total calls made by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193004UBO",
+"title": "UBO",
+"description": "Billed Outlets (UBO)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193054REDSuccessfulAuditWTD",
+"title": "Successful Audit (WTD)",
+"description": "Successful Audit (WTD)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193054RedTarget",
+"title": "RED Target",
+"description": "RED Target",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193054REDTargetAchievedPct",
+"title": "Target Achieved %",
+"description": "Target Achieved %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193054REDWTDScore",
+"title": "Overall WTD Score",
+"description": "Overall WTD Score",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "193054REDWTDScorePct",
+"title": "Overall WTD Score %",
+"description": "Overall WTD Score %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "233821OrderQyt",
+"title": "Order Count",
+"description": "Total Count of Order",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "233821PriInvValVol",
+"title": "Primary Invoice",
+"description": "Primary Invoice : Value & Volume",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "233821PrimarySales",
+"title": "Primary Sales",
+"description": "Sales from company to distributors",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "233821SecInvValVol",
+"title": "Secondary Invoice",
+"description": "Secondary Invoice : Value & Volume",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "233821SecondarySales",
+"title": "Secondary Sales",
+"description": "Revenue from distributors to retailers",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234089StartTime",
+"title": "Call Start Time",
+"description": "Time users start their first call",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234191VisitedOutlet",
+"title": "Visited Outlet",
+"description": "Count of visited outlets during selected date range",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455AttendanceStatusCounts",
+"title": "Attendance Status Counts",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455AverageOrderValue",
+"title": "Average Order Value",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455AverageOutletThroughput",
+"title": "Average Output Throughput",
+"description": "Average sales value per billed outlet",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455AvgDayStartTime",
+"title": "Avg. Day Start Time",
+"description": "Average time users start their day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455AvgFirstCallTime",
+"title": "Average First Call Time",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455AvgLastCallTime",
+"title": "Average Last Call Time",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455AvgRetailingTime",
+"title": "Average Retailing Time",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455CoolerOutletStatus",
+"title": "Cooler Outlet Status",
+"description": null,
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455FillRateValueVsVolume",
+"title": "Value Fill Rate / Volume Fill Rate",
+"description": "Sales Order Net Value / Qty In Std Units",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455Fulfillment",
+"title": "% Fulfillment",
+"description": "Orders fulfilled successfully",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455GeoAdherencePercentage",
+"title": "Geo-Adherence Percentage",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455journeyplanadherence",
+"title": "Journey Plan Adherence",
+"description": "Journey Plan Adherence (Visited/SC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455LPC",
+"title": "(Lines per call) LPC",
+"description": "Calls that resulted in outcomes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455MtdBilledOutlets",
+"title": "MTD Billed Outlets",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455MTDOVCPercentage",
+"title": "Geo OVC Percentage",
+"description": "Geo adherence % = 100 - OVC%: share of calls made within geo compliance (not out of compliance), same logic as app MTDGeoAdhGrouped",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455OrderNetValueANDQtyInStdUnit",
+"title": "Sales Order Metrices",
+"description": "Sales Order Net Value / Qty In Std Units",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455OrdersQty",
+"title": "Total orders quantity",
+"description": "Total number of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455OrdersValue",
+"title": "Total Orders Value",
+"description": "Total value of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455OrderValueVsOrderVolume",
+"title": "Order Value / Order Volume",
+"description": "Sales Order Net Value / Qty In Std Units",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455PrimarySales",
+"title": "Primary Sales",
+"description": "KBPL primary invoiced sales for the selected period",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455ProductivityPercentage",
+"title": "Productivity Percentage",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455Sales",
+"title": "Sales",
+"description": "Sales for the selected period",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SalesTargetAchievement",
+"title": "Sales Target and Achievement",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SalesValueOrderValue",
+"title": "Sales Value / Order Value",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SalesValueVsOrderValue",
+"title": "Sales Value / Order Value",
+"description": "Sales Order Net Value / Qty In Std Units",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SalesValueVsSalesVolume",
+"title": "Sales Value / Sales Volume",
+"description": "Invoice Net Revenue Value / Invoiced Qty In Std Units",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SalesVolumeOrderVolume",
+"title": "Sales Volume / Order Volume",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SalesVolumeVsOrderVolume",
+"title": "Sales Volume / Order Volume",
+"description": "Sales Order Net Value / Qty In Std Units",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455ScheduledCalls",
+"title": "Scheduled Calls",
+"description": "Total number of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SecondarySales",
+"title": "Secondary Sales",
+"description": "KBPL secondary ordered sales for the selected period",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455SecondarySalesFixed",
+"title": "Secondary Sales",
+"description": "KBPL secondary ordered sales for the selected period",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234455TotalActiveOutlets",
+"title": "Total Active Outlets",
+"description": "Distinct outlets visited by KBPL field users in the selected period",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455TotalActiveUsers",
+"title": "Total Active Users",
+"description": "Count of active users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455TotalOutlets",
+"title": "Total Outlets",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455UPC",
+"title": "No.Productive Outlets",
+"description": "Number of Productive Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455ValueFillRate",
+"title": "Value Fill Rate",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455VisitedOutlets",
+"title": "Visited Outlets (TC)",
+"description": "Visited Outlets (UTC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455VoulmeFillRate",
+"title": "Volume Fill Rate",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234455WorkStatus",
+"title": "Work Status Distribution",
+"description": "Distribution of different work statuses",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "234474PSActiveRules",
+"title": "Active Rules",
+"description": "Number of rules which are active currently",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234474PSPerfectStores",
+"title": "Perfect Stores",
+"description": "Number of Perfect Stores",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234474PSPerfectStoresPercentage",
+"title": "Perfect Stores %",
+"description": "Percentage of Perfect Stores",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "234474PSTotalStores",
+"title": "Total Stores",
+"description": "Total Scheduled call for the users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696",
+"title": "Active Outlets %",
+"description": "Active Outlets %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696Achievement",
+"title": "Achievement",
+"description": "Achievement",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696ActiveOutlet",
+"title": "Active Outlet",
+"description": "Active Outlets %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696ActiveOutlet%",
+"title": "Active Outlets %",
+"description": "Active Outlets %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696AssetTracking",
+"title": "Total Coolers Installed",
+"description": "Measures total deployed assets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696AverageBillingValue",
+"title": "Average Billing Value",
+"description": "Average Billing Value",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696AverageCansPerOrder",
+"title": "Average Cans Per Order",
+"description": "Average Cans Per Order",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696AverageCasesPerOrder",
+"title": "Average Cases Per Order",
+"description": "Average Cases Per Order",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696AverageOrderQyt",
+"title": "Average Order Quantity",
+"description": "Average Order Quantity",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696AverageOrderSize",
+"title": "Average Order Size",
+"description": "Average Order Size",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696AverageOrderValue",
+"title": "Order Metrics",
+"description": "Average Order Value",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696BeatAdherence",
+"title": "Beat Adherence",
+"description": "Measure actual route/visits against planned beat",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696BeatCoverage",
+"title": "Beat Coverage %",
+"description": "Covered calls/shops against total planned calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696CallProductivity",
+"title": "Call Productivity",
+"description": "Tracks productive call efficiency",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696ConversionRate",
+"title": "Conversion Rate",
+"description": "Percentage of productive calls out of total calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696EndTime",
+"title": "Day End Time",
+"description": "Time users end their day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696Fulfillment",
+"title": "Fulfillment %",
+"description": "Fulfillment % (Dispatch vs Pending)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696JourneyPlanAdherence",
+"title": "Journey Plan Adherence",
+"description": "Journey Plan Adherence",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696Login",
+"title": "Logins",
+"description": "Measures attendance - count of logged in users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696LoginBefore10AM",
+"title": "Login before 10 AM",
+"description": "Measures attendance - count of logged in users before 10 AM",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696Logout",
+"title": "Logout",
+"description": "Measures attendance - count of logged out users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696MappedOutletAssets",
+"title": "Mapped Outlet Assets",
+"description": "Mapped Outlet Assets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696NewlyAddedOutlet",
+"title": "Newly Added Outlet",
+"description": "Newly Added Outlet",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696NewOutlet",
+"title": "New Outlet Addition",
+"description": "Measures newly onboarded outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696OrderPCpercentage",
+"title": "Orders/PC %",
+"description": "Orders per PC",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696Orders/PC%",
+"title": "Orders/PC%",
+"description": "Orders/PC%",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696OrdersCases",
+"title": "Total orders quantity",
+"description": "Total number of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696PC",
+"title": "Productive Calls (PC)",
+"description": "Calls that resulted in outcomes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696PCv/sTC",
+"title": "Call Productivity",
+"description": "Ratio of productive calls against total calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696RepeatOutlet",
+"title": "Repeat Outlet %",
+"description": "Repeat Outlet %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696RepeatOutlet%",
+"title": "Repeat Outlet %",
+"description": "Repeat Outlet %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696SC",
+"title": "Scheduled Calls (SC)",
+"description": "Scheduled calls made by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696SCv/sTC",
+"title": "SC vs TC 244696SCv/sTC",
+"description": "SC vs TC\t244696SCv/sTC",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696SCvsTC",
+"title": "SC vs TC",
+"description": "SC vs TC",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696SecondaryOrderQuantity",
+"title": "Total Sales",
+"description": "Order from distributors to retailers",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696SecondarySales",
+"title": "Secondary Sales",
+"description": "Order from distributors to retailers",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696StartTime",
+"title": "Call Start Time",
+"description": "Time users start their first call",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696StdQuanityCases",
+"title": "Secondary Sales Achievement",
+"description": "Secondary Sales Achievement % (cases)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696StrikeRate",
+"title": "Productivity %",
+"description": "PC / TC x 100",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696Target",
+"title": "Target",
+"description": "Target",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696TC",
+"title": "Total Calls (TC)",
+"description": "Total calls made by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696TotalActiveOutletsNew",
+"title": "Total Active Outlets",
+"description": "Actively Invoiced Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696TotalInactiveOutletsNew",
+"title": "Total Inactive Outlets",
+"description": "Total Inactive Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696TotalWorkingTime",
+"title": "Total Working Hours",
+"description": "Tracks daily productivity hours duration",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "244696UPC",
+"title": "Productive Outlets",
+"description": "Count of outlets generating valid sales",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696UTC",
+"title": "Visited Outlets (UTC)",
+"description": "Visited Outlets (UTC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "244696WorkingHours",
+"title": "Working Hours",
+"description": "Tracks daily productivity hours",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "254783ActiveOutletsBongchie",
+"title": "Total Active Outlets",
+"description": "Count of active outlets in company master (Date Not Applicable)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "254783AvgLoginTime",
+"title": "Logins",
+"description": "Avg timestamp for first user activity.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "254783firstPc",
+"title": "Logins",
+"description": "Avg timestamp for first user activity.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "254783OutletCoverage",
+"title": "Coverage%",
+"description": "Coverage Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "254783totalBeats",
+"title": "Total Beats",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "254783UBOPercentage",
+"title": "Billed Outlets (UBO)",
+"description": "Billed Outlets (UBO)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "A1NumberOfBilledOutlets",
+"title": "# of Billed Outlets",
+"description": "Active outlets with sales transactions",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Absent",
+"title": "Absent",
+"description": "count of users Absent",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AbsentMars",
+"title": "Absent",
+"description": "count of users absent",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AbsentVivo",
+"title": "Absent",
+"description": "count of users Absent",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ActiveDistributorCount",
+"title": "Distributor Count",
+"description": "Live data as per the current master V",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ActiveOutletsNew",
+"title": "Active Outlets",
+"description": "Total Active Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Assetcompliancemars",
+"title": "Asset Compliance",
+"description": "Asset Compliance",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AssignedBeatsCount",
+"title": "Total Beats",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AssignedOutlets",
+"title": "Total Assigned Outlets",
+"description": "Total Assigned Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AssignedRoutesCount",
+"title": "Total Routes",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AverageOutletThroughput",
+"title": "Average Output Throughput",
+"description": "Average sales value per billed outlet",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "AveragePCPerUser",
+"title": "Avg PC Per User",
+"description": "Avg PC Per User",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AverageSCPerUser",
+"title": "Avg SC Per User",
+"description": "Avg SC Per User",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AverageTCPerUser",
+"title": "Avg TC Per User",
+"description": "Avg TC Per User",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AverageVisitPerUser",
+"title": "Avg Visit Per User",
+"description": "Avg Visit Per User",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgAvgTimePerStore",
+"title": "Avg Time Per Store",
+"description": "Avg Time Per Store",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgCallStartTime",
+"title": "Avg. Call Start Time",
+"description": "Average time users start their first call",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgDayEndTime",
+"title": "Avg. Day End Time",
+"description": "Average time users end their day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgDayStartTime",
+"title": "Avg. Day Start Time",
+"description": "Average time users start their day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgDayStartTimeBongchieIST",
+"title": "Avg. Day Start Time (IST)",
+"description": "Average valid user day-start time converted from UTC to India Standard Time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgDayStartTimeBongchieISTV2",
+"title": "Avg. Day Start Time (IST)",
+"description": "Average valid user day-start time, rendered in the viewer's local timezone (IST for Bongchie); earlier starts are treated as better",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgDayStartTimeMars",
+"title": "Avg. Day Start Time",
+"description": "Average time users start their day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgExpiryStockMars",
+"title": "Avg Expiry Stock Value",
+"description": "Avg Expirty Stock Value",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgInvoiceValueMarsLiveMap",
+"title": "Average Order Value",
+"description": "Average order quantity per mapped outlet",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgOOSMars",
+"title": "Avg OOS",
+"description": "Avg OOS",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgOrderValue",
+"title": "Average Order Value",
+"description": "Average order quantity per mapped outlet",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgOutletScore",
+"title": "Average Outlet Score",
+"description": "Average Outlet Score",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "AvgThroughputMars",
+"title": "Avg Throughput",
+"description": "Avg Throughput",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "avgTimeSpentRetailingVivo",
+"title": "Avg Time Spent Retailing",
+"description": "Average Retailing Time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "BilledOutlets",
+"title": "Billed Outlets (UBO)",
+"description": "Billed Outlets (UBO)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "capCallVivo",
+"title": "Cap Call",
+"description": "Cap Call V",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "closingStock",
+"title": "Closing Stock",
+"description": "Opening Stock",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "ComplianceRatePercentage",
+"title": "Compliance Rate %",
+"description": "Compliance Rate Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ConversionRate",
+"title": "Conversion Rate",
+"description": "Percentage of productive calls out of total calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "CoolerPurityIR",
+"title": "Cooler Purity",
+"description": "Cooler Purity %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Coverage",
+"title": "Coverage",
+"description": "TC / SC / Coverage %",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "CoveragePercentage",
+"title": "Coverage %",
+"description": "Monthly outlet coverage percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "CoveragePercentage_UTC/MappedOutelts",
+"title": "Coverage %",
+"description": "UTC / Unique Planned Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "CoveragePercentageBongchie",
+"title": "Coverage %",
+"description": "Unique total calls out of unique scheduled calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "CoveragePercentageFinalNew",
+"title": "Coverage %",
+"description": "Unique total calls out of unique scheduled calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "CoveragePercentageNew",
+"title": "Coverage",
+"description": "Coverage = TC / SC",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "CoveragePercentageUTCbyMappedOutelts",
+"title": "Coverage %",
+"description": "UTC / Unique Planned Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "coverageVivo",
+"title": "Coverage %",
+"description": "Coverage Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "customerFacingTimeVivo",
+"title": "Customer Facing Time",
+"description": "Customer Facing Time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyAchievedSales",
+"title": "Daily Achieved Sales",
+"description": "Total sales achieved for the day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyCoveragePercentage",
+"title": "Daily Coverage Percentage",
+"description": "Daily coverage percentage of outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyDayStartTime",
+"title": "Daily Day Start Time",
+"description": "Daily day start time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyFirstCallTime",
+"title": "Daily First Call Time",
+"description": "Daily first call time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyGoalSales",
+"title": "Daily Goal Sales",
+"description": "Daily sales target",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyKYCOutlets",
+"title": "Daily KYC Outlets",
+"description": "KYC compliant outlets today",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyLastCallTime",
+"title": "Daily Last Call Time",
+"description": "Daily last call time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyOVCPercentage",
+"title": "Daily OVC Percentage",
+"description": "Daily outlet visit count percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyPlannedOutlets",
+"title": "Daily Planned Outlets",
+"description": "Number of planned outlets for today",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyProductiveOutlets",
+"title": "Daily Productive Outlets",
+"description": "Number of productive outlets today",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyProgressPercentage",
+"title": "Daily Progress Percentage",
+"description": "Progress percentage towards daily goal",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyRetailingTime",
+"title": "Avg Retailing Time",
+"description": "Avg Retailing Time done by Users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyTimePerCall",
+"title": "Daily Time Per Call",
+"description": "Daily average total time in minutes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DailyVisitedOutlets",
+"title": "Daily Visited Outlets",
+"description": "Number of outlets visited today",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "deactivatedOutletsVivo",
+"title": "Deactivated Outlets",
+"description": "Total Outlets which are deactivated",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DistributorCount(HSFPL)",
+"title": "Distributor Count",
+"description": "Live data as per the current master",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "DropSize",
+"title": "Dropsize on Invoice",
+"description": "Dropsize on Invoice",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "FillRate",
+"title": "Fill Rate %",
+"description": "Order fulfillment rate percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "FillRatePercentagePrimary",
+"title": "Fill Rate % (Primary)",
+"description": "Percentage of primary orders fulfilled completely",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "FillRatePercentageSecondary",
+"title": "Fill Rate % (Secondary)",
+"description": "Percentage of secondary orders fulfilled completely",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Fulfillment",
+"title": "% Fulfillment",
+"description": "Orders fulfilled successfully",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Fulfillment_SLMG",
+"title": "% Fulfillment",
+"description": "Orders fulfilled successfully",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "GeoFencingCompliance",
+"title": "Geo-Fencing Compliance",
+"description": "Geo-Fencing Compliance",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "Holidayleavevivo",
+"title": "Holiday/Leaves",
+"description": "Count of Holiday/Leaves",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "InactiveOutlets",
+"title": "Total Inactive Outlets",
+"description": "Count of Inactive Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "IRActiveUsersCount",
+"title": "Active Users",
+"description": "Distinct field users who captured IR images in the selected period",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "IRLastVisit",
+"title": "Last Visit",
+"description": "Last Visited Date",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "IRMasterOutletCount",
+"title": "Total Active Outlets IR",
+"description": "Distinct IR outlets scheduled in the selected period",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "IROutletScore",
+"title": "Outlet Score",
+"description": "Average Outlet Score",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "IRTotalVisit",
+"title": "Total Visit",
+"description": "Total Visit",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "KycOutlets",
+"title": "KYC",
+"description": "Verified outlets count",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "LateLogins",
+"title": "Late Logins",
+"description": "Number of late logins",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "leaveAbsentUsersVivo",
+"title": "Leave/Absent Users",
+"description": "Users who are absent or on leave",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "LeaveMars",
+"title": "Leave",
+"description": "count of users on leave",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "LPC",
+"title": "(Lines per call) LPC",
+"description": "Calls that resulted in outcomes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "LPC_Growth_BookedPR",
+"title": "Avg LPC in PR Booked",
+"description": "Measures the count of LPC uplifted for the outlets where recommended products were successfully booked.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "LPC_Growth_PRNotBooked",
+"title": "Avg LPC in PR not Booked",
+"description": "Measures the count of LPC uplifted for outlets where recommendations were pushed but none was booked.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "LPCMars",
+"title": "(Lines per call) LPC",
+"description": "Avg LPC",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "LPPCvivo",
+"title": "LPPC",
+"description": "LPPC",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MappedBeatsCount",
+"title": "Total Beats",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MappedOutlets",
+"title": "Total Outlets",
+"description": "Total Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MappedRoutesCount",
+"title": "Total Routes",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MasterOutletCount",
+"title": "Total Active Outlets",
+"description": "Total Active Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MSLComplianceMars",
+"title": "MSL Compliance",
+"description": "MSL Compliance",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDCoveragePercentage",
+"title": "MTD Coverage Percentage",
+"description": "Month to date coverage percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDFirstCallTime",
+"title": "MTD First Call Time",
+"description": "Month to date average first call time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDKYCOutlets",
+"title": "MTD KYC Outlets",
+"description": "Month to date KYC outlets verification percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDLastCallTime",
+"title": "MTD Last Call Time",
+"description": "Month to date average last call time",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDOVCPercentage",
+"title": "MTD OVC Percentage",
+"description": "Month to date outlet visit count percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDRetailingTime",
+"title": "MTD Retailing Time",
+"description": "Month to date average hours between first and last call",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDRouteCoverage",
+"title": "MTD Route Coverage",
+"description": "Month to date route coverage - beats with 5+ productive shops",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDSales",
+"title": "MTD Sales",
+"description": "Month to date sales value",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDTarget",
+"title": "MTD Target",
+"description": "Month to date target value",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "MTDTimePerCall",
+"title": "MTD Time Per Call",
+"description": "Month to date average call duration in seconds",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "NearExpiryStockMars",
+"title": "Near Expiry Stock",
+"description": "Near Expiry Stock",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "newOutletCreationVivo",
+"title": "New Outlet Creation",
+"description": "New Outlet Creation V",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "noOfDsRsVivo",
+"title": "No. of DSRs",
+"description": "Total Active Field Users in Company",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "NotBilledOutlets",
+"title": "Not Billed Outlets",
+"description": "Not Billed Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "NotProductiveOutlets",
+"title": "Not Productive Outlets",
+"description": "Not Productive Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "NotVisitedOutlets",
+"title": "Not Visited Outlets",
+"description": "Not Visited Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "NumberOfBilledOutlets",
+"title": "# of Billed Outlets",
+"description": "Active outlets with sales transactions",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ofBilledOutlets1",
+"title": "# of Billed Outlets1",
+"description": "Active outlets with sales transactions",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Official",
+"title": "Official",
+"description": "count of users Official",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "openingStock",
+"title": "Opening Stock",
+"description": "Opening Stock",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "OrderMetrics",
+"title": "Order Metrics",
+"description": "Multiple order-related metrics",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "OrderNetValueANDQtyInStdUnit",
+"title": "Sales Order Metrices",
+"description": "Sales Order Net Value / Qty In Std Units",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "Ordernetvaluetlotte",
+"title": "Total Net Value",
+"description": "Total Net Value",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OrdersQty",
+"title": "Total orders quantity",
+"description": "Total number of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OrdersValue",
+"title": "Total Orders Value",
+"description": "Total value of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OrdersValueMars",
+"title": "Total Orders Value",
+"description": "Total value of orders placed",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OSAMars",
+"title": "OSA",
+"description": "OSA",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OutletCountPR",
+"title": "Outlet Visited",
+"description": "Count of unique outlets visited during the Base Period.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OutletCoverage",
+"title": "Coverage%",
+"description": "Coverage Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OutletCoverageintergrow",
+"title": "Coverage%",
+"description": "Coverage Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OutletPenetration",
+"title": "Penetration%",
+"description": "Penetration Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "OvcPercentage",
+"title": "OVC",
+"description": "Ovc marked percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Ovs",
+"title": "OVC",
+"description": "Verified outlets count",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PC",
+"title": "Productive Calls (PC)",
+"description": "Calls that resulted in outcomes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PenetrationPercentageBongchie",
+"title": "Penetration %",
+"description": "Penetration Percentage (UPC/USC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PenetrationPercentageFinalNew",
+"title": "Penetration %",
+"description": "Penetration Percentage (UPC/USC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PenetrationPercentageNew",
+"title": "Penetration %",
+"description": "Penetration Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PenetrationPercentageVPCbyTC",
+"title": "Penetration % EDP",
+"description": "Penetration Percentage (PC/TC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "penetrationVivo",
+"title": "Penetration",
+"description": "Penetration % V",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PerfectStoreMars",
+"title": "Perfect Store Count",
+"description": "Perfect Store Count",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "planogrammars",
+"title": "Planogram Compliance",
+"description": "Planogram Compliance",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PRBooked",
+"title": "Recommendations Booked",
+"description": "Represents the outlets where at least one recommended product was booked.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "presentVivo",
+"title": "Present %",
+"description": "User  Present %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PrimaryOrderAndInvoice",
+"title": "Primary Orders and Sales",
+"description": "Primary Orders and Sales",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "PrimaryReturnPercentage",
+"title": "Primary Return %",
+"description": "Percentage of primary sales returned by distributors",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "PrimaryReturns",
+"title": "Primary Returns",
+"description": "Primary Returns",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "PrimarySales",
+"title": "Primary Sales",
+"description": "Sales from company to distributors",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "PRNotBooked",
+"title": "Recommendations Not Booked",
+"description": "Represents outlets where recommendations were provided but no recommended products were ordered.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ProductActiveOutlet",
+"title": "Product Active Outlet",
+"description": "Outlets that have purchased in the last 30 days.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "productiveCallsVivo",
+"title": "Productive Calls",
+"description": "PC v",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ProductiveOutlets",
+"title": "Productive Outlets (UPC)",
+"description": "Productive Outlets (UPC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ProductivityPct",
+"title": "Productivity %",
+"description": "Productivity %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ProductMissingOutlet",
+"title": "Product Missing Outlet",
+"description": "Outlets with no purchase in the last 30 days.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "RecommendationGivenPR",
+"title": "Recommendations Given",
+"description": "Represents count of outlets where PR recommendations were generated.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "RetailingMars",
+"title": "Retailing",
+"description": "count of users doing retailing",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "RetailingWork",
+"title": "Retailing",
+"description": "count of users doing retailing",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ReturnRate",
+"title": "Return %",
+"description": "Percentage of sales returned",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROAverageRouteDistance",
+"title": "Average Route Distance",
+"description": "Average distance covered by the employees across selected date range",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROProductiveCalls",
+"title": "Productive Calls",
+"description": "Count of outlets on which orders were taken",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "RORetailTime",
+"title": "Retail Time",
+"description": "Total time spent in retailing",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROREtailTimePercentage",
+"title": "Retail Time Percentage",
+"description": "Percentage of total time spent in retailing",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "RORouteCoverageAdherence",
+"title": "Route Coverage Adherence",
+"description": "Number of outlets that were present in the scheduled route and visited by the Employee",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROScheduledCalls",
+"title": "Scheduled Calls",
+"description": "Number of outlets that are scheduled to be visited by the employee in a day",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROTotalCalls",
+"title": "Total Calls",
+"description": "Total number of outlets visited",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROTotalDistanceTravelled",
+"title": "Total Distance Travelled",
+"description": "Total Distance travelled by the employees",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROTotalTravelTime",
+"title": "Total Travel Time",
+"description": "Total time taken by the employees in travelling",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "routeAdherenceVivo",
+"title": "Route Adherence %",
+"description": "Route Adherence %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "RouteCoverage",
+"title": "Route Coverage",
+"description": "Route coverage percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ROutOfTurnCallPercentage",
+"title": "OVT Percentage",
+"description": "Number of outlets visited out of route",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "RreprimarySalesMars",
+"title": "Total Sell-In",
+"description": "Total Sell-In",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "SalesMetrics",
+"title": "Sales Metrics",
+"description": "Multiple sales-related metrics in one query",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "scheduledCallsScVivo",
+"title": "Scheduled Calls (SC)",
+"description": "SC v",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "SchemeSpend",
+"title": "SchemeSpend",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "SecondaryOrderAndInvoice",
+"title": "Secondary Orders and Sales",
+"description": "Secondary Orders and Sales",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "SecondaryReturnPercentage",
+"title": "Secondary Return %",
+"description": "Percentage of secondary sales returned by retailers",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "SecondaryReturns",
+"title": "Secondary Returns",
+"description": "Secondary Returns",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "secondaryReturnsInSuperUnits",
+"title": "Secondary Returns in Super Units",
+"description": "Secondary Returns in Super Units Vivo",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "SecondarySales",
+"title": "Secondary Sales",
+"description": "Revenue from distributors to retailers",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "SelloutMars",
+"title": "Secondary Sales",
+"description": "Revenue from distributors to retailers",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "SOSpct",
+"title": "SOS %",
+"description": "SOS %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "StockHoldingDays",
+"title": "Stock Holding Days",
+"description": "Average days of stock holding",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TargetVivo",
+"title": "Target",
+"description": "Target",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TargetVsAchievementGumFocusedMars",
+"title": "Achievement Vs Target %",
+"description": "User wise Product Category wise Target (Mars VN MT)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TargetVsAchievementMars",
+"title": "Achievement Vs Target %",
+"description": "Van Sales PC Wise Target",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TargetVsAchievementMarsGTUserwise",
+"title": "Achievement Vs Target %",
+"description": "User Wise Sales Target",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TargetVsAchievementOutletTotalSalesTarget(MarsMT)",
+"title": "Achievement Vs Target %",
+"description": "Outlet Total Sales Target (Mars MT)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TargetVsAchievementproductcategoryMarsMT",
+"title": "Achievement Vs Target %",
+"description": "Outlet Wise Product Category Wise Target (Mars MT)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TargetVsAchievementTotalSalesTargetMars",
+"title": "Achievement Vs Target %",
+"description": "User Wise Target (Mars)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "Targetvsachivementvivo",
+"title": "Achievement Vs Target %",
+"description": "Achievement Vs Target %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TC",
+"title": "Total Calls (TC)",
+"description": "Total calls made by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TC_EDP_SD",
+"title": "Productive Calls (PC)",
+"description": "Calls that resulted in outcomes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "throughput",
+"title": "Throughput",
+"description": "Throughput in KL",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ThroughputGrowth_PRBooked",
+"title": "ThroughputGrowth_PRBooked",
+"description": "Measures the growth of sales for the outlets where recommended products were booked.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "ThroughputGrowth_PRNotBooked",
+"title": "ThroughputGrowth_PRNotBooked",
+"description": "Measures the growth of sales for the outlets where recommendations were not booked.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "throughputVivo",
+"title": "DropSize",
+"description": "DropSize",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalActiveOutlets",
+"title": "Total Active Outlets",
+"description": "Outlets visited by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalActiveOutlets1",
+"title": "Total Active Outlets",
+"description": "Outlets visited by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalActiveOutletsNew",
+"title": "Total Active Outlets",
+"description": "Actively Invoiced Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalActiveUsers",
+"title": "Total Active Users",
+"description": "Count of active users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalBilledOutletlotte",
+"title": "# of Billed Outlets",
+"description": "Total Billed Outlet",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalCallsAnalytics",
+"title": "Total Calls (TC)",
+"description": "Total calls made by field users",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "totalCallsTcVivo",
+"title": "Total Calls (TC)",
+"description": "TC v",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "totalCallsVivo",
+"title": "Total Calls",
+"description": null,
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "totalGrn",
+"title": "Total GRN",
+"description": "Total GRN",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalImageCaptured",
+"title": "Total Image Captured",
+"description": "Total Image Captured",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalOutletsNew",
+"title": "Total Outlets",
+"description": "Total count of outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalOVC",
+"title": "Total OVC",
+"description": "Total OVC calls made by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalOVT",
+"title": "Total OVT",
+"description": "Total OVT calls made by field users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalProductiveCallsAnalytics",
+"title": "Total Productive Calls (PC)",
+"description": "Total productive calls made by field users",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "totalSC",
+"title": "Scheduled Calls (SC)",
+"description": "Total Scheduled call for the users",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "totalScheduledCallsVivo",
+"title": "Total Scheduled Calls",
+"description": "Total Scheduled Calls",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "TotalSellInAchievementMarsMt",
+"title": "Total Sell-In Achievement",
+"description": "Total Sell-In Achievement",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UBO_L3M_haldiram",
+"title": "UBO L3M",
+"description": "Unique Billed Outlets L3M",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UBOPercentage",
+"title": "UBO%",
+"description": "UBO Percentage",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UBOPercentageNew",
+"title": "UBO %",
+"description": "Percentage Of Unique Billed Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UnassignedBeatsCount",
+"title": "Total Beats",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UnassignedOutlets",
+"title": "Total Unassigned Outlets",
+"description": "Total Unassigned Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UnassignedRoutesCount",
+"title": "Total Routes",
+"description": "Total Routes",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "uniqueProductiveCallsVivo",
+"title": "Unique Productive Calls",
+"description": "UPC v",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "uniqueTotalCallsVivo",
+"title": "Unique Total Calls",
+"description": "UTC v",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UnknownSKUs",
+"title": "Unknown SKUs COunt",
+"description": "Total Unknown SKUs",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UPC",
+"title": "No.Productive Outlets",
+"description": "Number of Productive Outlets",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "USCVivo",
+"title": "No. of Outlets per DSR",
+"description": "No. of Outlets per DSR",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "UserStatus",
+"title": "User Work Status Distribution",
+"description": "Distribution of different work statuses",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "utilizedScheme",
+"title": "Utilized Scheme",
+"description": "Utilized Scheme",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "VisitedOutlets",
+"title": "Visited Outlets (UTC)",
+"description": "Visited Outlets (UTC)",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "volumeInSuperUnitsVivo",
+"title": "Volume in SuperUnits",
+"description": "Volume in Super Units V",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "volumeVivo",
+"title": "Volume",
+"description": "Volume in Super Units",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "WalletSharePR",
+"title": "Recommended Wallet Share",
+"description": "Measures the contribution of PR revenue to the total outlet throughput.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "WiproCCMTCoolerPurityIRKPI",
+"title": "Cooler Purity",
+"description": "Cooler Purity %",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "WiproCCMTShareOfShelfIRKPI",
+"title": "Share of Shelf",
+"description": "Unique-image share of shelf: brand facings divided by total category facings × 100",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "WiproMTD1TertiarySalesQty",
+"title": "D-1 Sales",
+"description": "Modern Trade previous-day stock-derived sales quantity: Opening Stock + Stock Inward (GRN) - Closing Stock. Saved pending Wipro stock-feed p",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "WiproMTMTDTertiarySalesQty",
+"title": "MTD Tertiary Sales Qty",
+"description": "Modern Trade stock-derived sales quantity: Opening Stock + Stock Inward (GRN) - Closing Stock. Saved pending Wipro stock-feed population.",
+"chartType": null,
+"outputType": "scalar"
+},
+{
+"kind": "kpi",
+"configurationId": "WorkStatus",
+"title": "Work Status Distribution",
+"description": "Distribution of different work statuses",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "WorkStatusAnalytics",
+"title": "Work Activity Analytics Breakdown",
+"description": "Work Activity Analytics Breakdown",
+"chartType": null,
+"outputType": "multi"
+},
+{
+"kind": "kpi",
+"configurationId": "WorkStatusAnalytics1",
+"title": "Work Activity Analytics Breakdown112",
+"description": "Work Activity Analytics Breakdown",
+"chartType": null,
+"outputType": "multi"
+}
+]

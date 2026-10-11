@@ -44,9 +44,51 @@ export const users = pgTable("users", {
   team: teamEnum("team"),
   isAdmin: boolean("is_admin").notNull().default(false),
   active: boolean("active").notNull().default(true),
+  // scrypt hash; null until the person registers (for example an account an admin added)
+  passwordHash: text("password_hash"),
+  passwordUpdatedAt: timestamp("password_updated_at", { withTimezone: true }),
+  registeredAt: timestamp("registered_at", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   lastLoginAt: timestamp("last_login_at", { withTimezone: true }),
+  lastLogoutAt: timestamp("last_logout_at", { withTimezone: true }),
+  lastSeenAt: timestamp("last_seen_at", { withTimezone: true }),
 });
+
+// One row per signed-in browser. The cookie holds a random token; only its SHA-256 hash is stored.
+export const userSessions = pgTable(
+  "user_sessions",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    tokenHash: text("token_hash").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    lastSeenAt: timestamp("last_seen_at", { withTimezone: true }).notNull().defaultNow(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+    // Set when the session stops: logout, password_reset, revoked by an admin, deactivated
+    endedAt: timestamp("ended_at", { withTimezone: true }),
+    endReason: text("end_reason"),
+    ip: text("ip"),
+    userAgent: text("user_agent"),
+  },
+  (t) => [uniqueIndex("user_sessions_token_idx").on(t.tokenHash), index("user_sessions_user_idx").on(t.userId)],
+);
+
+// Audit trail of sign-ups, logins (and failed attempts), logouts and password changes
+export const authEvents = pgTable(
+  "auth_events",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+    email: text("email").notNull(),
+    type: text("type").notNull(),
+    ip: text("ip"),
+    userAgent: text("user_agent"),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("auth_events_email_idx").on(t.email, t.createdAt), index("auth_events_created_idx").on(t.createdAt)],
+);
 
 export const clients = pgTable(
   "clients",
@@ -206,7 +248,7 @@ export const catalogPages = pgTable("catalog_pages", {
   usedBy: integer("used_by").notNull().default(0),
 });
 
-// One-time sign-in codes sent by email. Only a hash of the code is stored.
+// One-time password-reset codes sent by email. Only a hash of the code is stored.
 export const loginCodes = pgTable(
   "login_codes",
   {

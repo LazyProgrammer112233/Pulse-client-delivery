@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState, useMemo, useState } from "react";
-import { Search, Building2, Plus, Check, Globe, Smartphone, Layers, AlertTriangle, X } from "lucide-react";
+import { Search, Building2, Plus, Check, Globe, Smartphone, Layers, AlertTriangle, X, Loader2, ArrowRight } from "lucide-react";
 import { createProject, type FormState } from "@/app/(app)/projects/actions";
 import { Button } from "@/components/ui/button";
 import { Input, Label } from "@/components/ui/input";
@@ -158,7 +158,8 @@ export function NewProjectForm({ clients }: { clients: Client[] }) {
 
       <div className="flex justify-end">
         <Button type="submit" size="lg" disabled={pending || (!manual && !selected)}>
-          {pending ? "Creating..." : "Create draft project"}
+          {pending ? <Loader2 className="animate-spin" /> : <ArrowRight />}
+          {pending ? "Creating" : "Create and build the requirement"}
         </Button>
       </div>
     </form>

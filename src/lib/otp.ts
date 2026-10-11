@@ -12,7 +12,7 @@ function hash(email: string, code: string) {
   return createHmac("sha256", process.env.AUTH_SECRET || "dev-secret").update(`${email}:${code}`).digest("hex");
 }
 
-/** Creates and emails a 6-digit code. Returns an error message when rate-limited. */
+/** Creates and emails a 6-digit password reset code. Returns an error message when rate-limited. */
 export async function issueCode(email: string): Promise<{ error?: string }> {
   const [{ recent }] = await db
     .select({ recent: sql<number>`count(*)::int` })
@@ -29,10 +29,10 @@ export async function issueCode(email: string): Promise<{ error?: string }> {
 
   await sendMail({
     to: email,
-    subject: `${code} is your Pulse Delivery sign-in code`,
-    text: `Your Pulse Delivery sign-in code is ${code}. It expires in ${CODE_TTL_MINUTES} minutes.\n\nIf you didn't ask for it, ignore this email.`,
+    subject: `${code} is your Pulse Delivery password reset code`,
+    text: `Your Pulse Delivery password reset code is ${code}. It expires in ${CODE_TTL_MINUTES} minutes.\n\nIf you didn't ask for it, ignore this email.`,
     html: `<div style="font-family:Arial,sans-serif;color:#0f1b33;max-width:420px">
-      <p style="font-size:15px">Your Pulse Delivery sign-in code is</p>
+      <p style="font-size:15px">Your Pulse Delivery password reset code is</p>
       <p style="font-size:32px;font-weight:700;letter-spacing:6px;color:#1e56d9;margin:8px 0 16px">${code}</p>
       <p style="font-size:13px;color:#5b6b86">It expires in ${CODE_TTL_MINUTES} minutes. If you didn't ask for it, ignore this email.</p>
     </div>`,

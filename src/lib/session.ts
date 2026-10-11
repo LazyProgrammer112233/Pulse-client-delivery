@@ -1,22 +1,14 @@
 import "server-only";
-import { cache } from "react";
 import { redirect } from "next/navigation";
-import { eq } from "drizzle-orm";
-import { auth } from "@/auth";
-import { db, schema } from "@/db";
-import { isWorkEmail } from "./domain";
+import { getSession } from "./auth";
+import type { schema } from "@/db";
 
 export type CurrentUser = typeof schema.users.$inferSelect;
 
-/** The signed-in user's row, or null. Cached per request. */
-export const getCurrentUser = cache(async (): Promise<CurrentUser | null> => {
-  const session = await auth();
-  const email = session?.user?.email?.toLowerCase();
-  if (!email || !isWorkEmail(email)) return null;
-  const [user] = await db.select().from(schema.users).where(eq(schema.users.email, email)).limit(1);
-  if (!user || !user.active) return null;
-  return user;
-});
+/** The signed-in user's row, or null. Cached per request through getSession. */
+export async function getCurrentUser(): Promise<CurrentUser | null> {
+  return (await getSession())?.user ?? null;
+}
 
 /** Signed in, active, and has picked a team. */
 export async function requireUser() {

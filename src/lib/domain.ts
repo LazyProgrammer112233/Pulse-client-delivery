@@ -1,12 +1,12 @@
-// Only this work domain can sign in. Kept in code so a stale Vercel variable can never override it.
-export const allowedDomain = "flick2know.com";
-
-export function isWorkEmail(email?: string | null) {
-  if (!email) return false;
-  const e = email.trim().toLowerCase();
-  return e.endsWith(`@${allowedDomain}`) && e.indexOf("@") === e.lastIndexOf("@");
+export function normalizeEmail(email: unknown) {
+  return String(email ?? "").trim().toLowerCase();
 }
 
+export function isValidEmail(email: string) {
+  return email.length <= 254 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+/** Emails listed in ADMIN_EMAILS become admins when they register. */
 export function isSeedAdmin(email: string) {
   return (process.env.ADMIN_EMAILS || "")
     .split(",")

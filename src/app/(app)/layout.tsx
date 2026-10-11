@@ -1,22 +1,19 @@
 import { LogOut, ShieldCheck } from "lucide-react";
-import { signOut } from "@/auth";
+import { logout } from "@/lib/auth-actions";
 import { requireUser } from "@/lib/session";
 import { teamName } from "@/lib/teams";
 import { Logo } from "@/components/logo";
 import { Nav } from "@/components/shell/nav";
 import { Avatar } from "@/components/avatar";
 import { Badge } from "@/components/ui/badge";
+import { NavProgress } from "@/components/shell/nav-progress";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const user = await requireUser();
 
-  async function logout() {
-    "use server";
-    await signOut({ redirectTo: "/login" });
-  }
-
   return (
     <div className="flex min-h-screen bg-white">
+      <NavProgress />
       <aside className="sticky top-0 hidden h-screen w-64 shrink-0 flex-col border-r border-line bg-gradient-to-b from-white to-brand-50/50 p-4 md:flex">
         <Logo className="px-2 py-1" />
         <div className="mt-8 flex-1">

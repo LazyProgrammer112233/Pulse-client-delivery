@@ -6,6 +6,16 @@
 import "dotenv/config";
 import { sql } from "drizzle-orm";
 import { db, schema } from "../src/db";
+import catalog from "./pulse-catalog.json";
+
+type CatalogRow = {
+  kind: "kpi" | "chart" | "dynamic_chart" | "composite_chart";
+  configurationId: string;
+  title: string;
+  description: string | null;
+  chartType: string | null;
+  outputType: string | null;
+};
 
 const PAGES = [
   { key: "control-tower-homepage", name: "Homepage", usedBy: 56, defaultTabs: ["Daily", "Monthly", "Quarterly", "Yearly"], description: "Overview of key metrics across all dimensions" },
@@ -62,7 +72,16 @@ async function main() {
     .values(PULSE_CLIENTS.map(([companyId, name]) => ({ companyId, name, source: "pulse" as const })))
     .onConflictDoNothing({ target: schema.clients.companyId });
 
-  console.log(`Seeded ${PAGES.length} pages and ${PULSE_CLIENTS.length} Pulse clients.`);
+  // Active KPI and chart configurations from Masters_GT_Replica; an admin CSV import refreshes them later
+  const rows = catalog as CatalogRow[];
+  for (let i = 0; i < rows.length; i += 400) {
+    await db
+      .insert(schema.catalogItems)
+      .values(rows.slice(i, i + 400))
+      .onConflictDoNothing({ target: [schema.catalogItems.kind, schema.catalogItems.configurationId] });
+  }
+
+  console.log(`Seeded ${PAGES.length} pages, ${PULSE_CLIENTS.length} Pulse clients and ${rows.length} catalog items.`);
   process.exit(0);
 }
 

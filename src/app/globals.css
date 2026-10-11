@@ -46,3 +46,12 @@
     @apply transition hover:border-brand-200 hover:shadow-[0_2px_4px_rgba(16,40,90,0.06),0_8px_24px_rgba(30,86,217,0.08)];
   }
 }
+
+@keyframes navprogress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
