@@ -1,17 +1,56 @@
 import "server-only";
-import { and, asc, desc, eq, ilike, inArray, or, sql } from "drizzle-orm";
+import { and, asc, desc, eq, ilike, inArray, notInArray, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
 import { db, schema } from "@/db";
 import type { ProjectStatus } from "./status";
 import { toItemRow, type Branding } from "./requirement";
+import { TECH_HIDDEN, techOnly } from "./workflow";
 
 const owner = alias(schema.users, "owner");
 const creator = alias(schema.users, "creator");
 
 export type ProjectRow = Awaited<ReturnType<typeof listProjects>>[number];
 
-export async function listProjects(filter: { statuses?: ProjectStatus[]; ownerId?: string; createdBy?: string } = {}) {
+/** SQL condition: Product has handed this project to Tech at some point and it's still running. */
+const handedToTech = () =>
+  and(
+    notInArray(schema.projects.status, TECH_HIDDEN),
+    or(
+      eq(schema.projects.status, "in_development"),
+      sql`exists (select 1 from ${schema.events} where ${schema.events.projectId} = ${schema.projects.id} and ${schema.events.toStatus} = 'in_development')`,
+    ),
+  );
+
+/** Whether a Tech member may open this project. */
+export async function techCanSee(projectId: string) {
+  const [row] = await db
+    .select({ id: schema.projects.id })
+    .from(schema.projects)
+    .where(and(eq(schema.projects.id, projectId), handedToTech()))
+    .limit(1);
+  return !!row;
+}
+
+/** Everyone opens every project, except Tech, who only open the ones handed to them. */
+export async function canOpenProject(user: { team: "cst" | "product" | "tech" | null; isAdmin: boolean }, projectId: string) {
+  return !techOnly(user) || techCanSee(projectId);
+}
+
+/** Azure DevOps links for a set of projects, for the Tech dashboard. */
+export async function listAdoLinks(projectIds: string[]) {
+  if (!projectIds.length) return [];
+  return db
+    .select({ projectId: schema.links.projectId, url: schema.links.url, label: schema.links.label })
+    .from(schema.links)
+    .where(and(inArray(schema.links.projectId, projectIds), eq(schema.links.kind, "ado")))
+    .orderBy(asc(schema.links.createdAt));
+}
+
+export async function listProjects(
+  filter: { statuses?: ProjectStatus[]; ownerId?: string; createdBy?: string; forTech?: boolean } = {},
+) {
   const where = [];
+  if (filter.forTech) where.push(handedToTech());
   if (filter.statuses?.length) where.push(inArray(schema.projects.status, filter.statuses));
   if (filter.ownerId) where.push(eq(schema.projects.productOwnerId, filter.ownerId));
   if (filter.createdBy) where.push(eq(schema.projects.createdBy, filter.createdBy));

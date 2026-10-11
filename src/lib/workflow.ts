@@ -8,11 +8,16 @@ const CLOSED: ProjectStatus[] = ["live", "cancelled"];
 
 export const isTeam = (u: Actor, ...teams: Team[]) => u.isAdmin || (!!u.team && teams.includes(u.team));
 
-/** CST writes the requirement; Product can refine it while delivering. Frozen once live or cancelled. */
+/** Only CST writes the requirement, at any stage until the project is cancelled. Product and Tech read it. */
 export function canEditRequirement(u: Actor, p: Pick<ProjectLike, "status">) {
-  if (CLOSED.includes(p.status) || p.status === "on_hold") return false;
-  return p.status === "draft" ? isTeam(u, "cst") : isTeam(u, "cst", "product");
+  return p.status !== "cancelled" && isTeam(u, "cst");
 }
+
+/** Tech works only on projects Product has handed to them, while they're still running. */
+export const TECH_HIDDEN: ProjectStatus[] = ["draft", "product_assigned", "estimating", ...CLOSED];
+
+/** Tech members (not admins) see a narrower set of projects. */
+export const techOnly = (u: Actor) => u.team === "tech" && !u.isAdmin;
 
 /** Review rounds CST may use: two, plus a third once Product approves the request. */
 export const allowedRounds = (p: ProjectLike) => (p.extraRoundApprovedBy ? 3 : 2);

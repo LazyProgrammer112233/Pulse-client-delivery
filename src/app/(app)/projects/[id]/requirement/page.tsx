@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, LayoutTemplate, BarChart3, Palette, Puzzle, Send, Lock } from "lucide-react";
 import { requireUser } from "@/lib/session";
-import { getProject, getRequirement, listCatalogPages } from "@/lib/queries";
+import { canOpenProject, getProject, getRequirement, listCatalogPages } from "@/lib/queries";
+import { NotWithTech } from "@/components/projects/not-with-tech";
 import { canEditRequirement, isTeam } from "@/lib/workflow";
 import { advance } from "../../actions";
 import { StatusBadge } from "@/components/projects/status-badge";
@@ -22,6 +23,7 @@ export default async function RequirementPage({ params }: { params: Promise<{ id
   const { id } = await params;
   if (!/^[0-9a-f-]{36}$/i.test(id)) notFound();
   const user = await requireUser();
+  if (!(await canOpenProject(user, id))) return <NotWithTech />;
   const [data, req, catalog] = await Promise.all([getProject(id), getRequirement(id), listCatalogPages()]);
   if (!data) notFound();
   const { project, client } = data;
@@ -39,7 +41,7 @@ export default async function RequirementPage({ params }: { params: Promise<{ id
       <p className="mt-1 text-sm text-muted">
         {editable
           ? "Pick the pages, then add each KPI card and chart with its formula, logic and place on the page. Every section saves on its own."
-          : "Read-only. The requirement can be edited by CST while it's a draft, and by CST or Product during delivery."}
+          : "Read-only. Only CST can change the requirement; every change they make shows on the project's timeline."}
       </p>
     </div>
   );
@@ -48,10 +50,10 @@ export default async function RequirementPage({ params }: { params: Promise<{ id
     return (
       <>
         {header}
-        {(project.status === "live" || project.status === "cancelled") && (
+        {project.status === "cancelled" && (
           <Alert tone="info" className="mb-4">
             <span className="inline-flex items-center gap-1.5">
-              <Lock className="size-4" /> This project is closed, so its requirement is locked.
+              <Lock className="size-4" /> This project was cancelled, so its requirement is locked.
             </span>
           </Alert>
         )}

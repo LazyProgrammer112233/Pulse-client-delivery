@@ -11,6 +11,7 @@ import { logEvent } from "@/lib/events";
 import { notifyTeam } from "@/lib/notify";
 import { STATUS, type ProjectStatus } from "@/lib/status";
 import { canRequestChanges, canRequestExtraRound, extraRoundPending, isTeam } from "@/lib/workflow";
+import { canOpenProject } from "@/lib/queries";
 import type { Team } from "@/lib/teams";
 
 const newProjectSchema = z.object({
@@ -89,6 +90,7 @@ export async function createProject(_: FormState, formData: FormData): Promise<F
 
 export async function addComment(projectId: string, formData: FormData) {
   const user = await requireUser();
+  if (!(await canOpenProject(user, projectId))) return;
   const body = String(formData.get("body") ?? "").trim();
   if (!body) return;
   await db.insert(schema.comments).values({ projectId, authorId: user.id, body: body.slice(0, 5000) });
@@ -154,7 +156,7 @@ async function move(
 export async function advance(projectId: string, action: string, _: ActionState, formData: FormData): Promise<ActionState> {
   const user = await requireUser();
   const [p] = await db.select().from(schema.projects).where(eq(schema.projects.id, projectId)).limit(1);
-  if (!p) return { error: "This project no longer exists." };
+  if (!p || !(await canOpenProject(user, projectId))) return { error: "This project no longer exists." };
   const deny = (team: Team | Team[]) => !isTeam(user, ...(Array.isArray(team) ? team : [team]));
   const wrongState = (...ok: ProjectStatus[]) => !ok.includes(p.status);
   const stale = { error: "Someone else just moved this project. Refresh to see where it is now." };
@@ -328,6 +330,7 @@ export async function advance(projectId: string, action: string, _: ActionState,
 
 export async function addLink(projectId: string, _: ActionState, formData: FormData): Promise<ActionState> {
   const user = await requireUser();
+  if (!(await canOpenProject(user, projectId))) return { error: "This project isn't with Tech." };
   const kind = text(formData, "kind", 10) as "ado" | "file" | "url";
   const url = text(formData, "url", 2000);
   const label = text(formData, "label", 200);

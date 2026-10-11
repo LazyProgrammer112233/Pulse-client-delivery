@@ -26,6 +26,7 @@ Internal portal for delivering Pulse web dashboards and the Pulse app to new cli
 - **Workflow** on every project page, with a "Next step" card that shows only the buttons the current person can use:
   draft → Product assigns an owner → owner sets man-days and target date → configuring → Tech (optional) marks deployed to beta or prod → Product QA → CST review → live.
   CST gets two review rounds; a third needs Product to approve the request. Product can pause, resume or cancel, change the owner, estimate or deadline (with a reason on the timeline), and attach Azure DevOps PBIs, files and links.
+- **Who sees what.** Only CST creates client projects and edits the requirement, at any stage until a project is cancelled; each edit after hand-off shows on the timeline. Product and Tech read the full requirement on the project page. Tech sees only running projects Product has handed to them, and their dashboard lists each one with its Azure DevOps PBIs. Admins can do everything.
 - Every hand-off, plan change, requirement edit and comment is on the project timeline, and the receiving team gets an email nudge when SMTP is set.
 
 ## Setup

@@ -9,7 +9,6 @@ import {
   MessageSquare,
   History,
   LayoutGrid,
-  ArrowRight,
   Link2,
   FileText,
   Trash2,
@@ -18,7 +17,7 @@ import {
   Check,
 } from "lucide-react";
 import { requireUser } from "@/lib/session";
-import { getProject, getRequirement, getTimeline, listLinks, listTeamMembers } from "@/lib/queries";
+import { canOpenProject, getProject, getRequirement, getTimeline, listLinks, listTeamMembers } from "@/lib/queries";
 import { teamName } from "@/lib/teams";
 import { formatDate, formatDateTime } from "@/lib/utils";
 import { allowedRounds, canEditRequirement, isTeam } from "@/lib/workflow";
@@ -35,6 +34,8 @@ import { ProductTypeLabel } from "@/components/projects/project-table";
 import { Lifecycle } from "@/components/projects/lifecycle";
 import { WorkflowPanel } from "@/components/projects/workflow-panel";
 import { ActionForm } from "@/components/projects/action-form";
+import { NotWithTech } from "@/components/projects/not-with-tech";
+import { RequirementSummary } from "@/components/requirement/requirement-summary";
 
 const LINK_ICON = { ado: Link2, file: FileText, url: ExternalLink } as const;
 const LINK_LABEL = { ado: "Azure DevOps PBI", file: "File", url: "Link" } as const;
@@ -43,6 +44,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   if (!/^[0-9a-f-]{36}$/i.test(id)) notFound();
   const user = await requireUser();
+  if (!(await canOpenProject(user, id))) return <NotWithTech />;
   const [data, timeline, req, links, productPeople] = await Promise.all([
     getProject(id),
     getTimeline(id),
@@ -98,7 +100,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             <CardHeader>
               <div>
                 <CardTitle>Requirement</CardTitle>
-                <CardDescription>Pages, KPIs, charts, branding and add-ons for this client.</CardDescription>
+                <CardDescription>
+                  {editable
+                    ? "Pages, KPIs, charts, branding and add-ons for this client."
+                    : "What CST captured for this client. Only CST can change it; changes show on the timeline."}
+                </CardDescription>
               </div>
               <LayoutGrid className="size-5 text-brand-500" />
             </CardHeader>
@@ -116,17 +122,25 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
                   </div>
                 ))}
               </div>
-              {req.pages.length > 0 && (
-                <p className="mt-3 text-sm text-muted">
-                  {req.pages.map((p) => p.name).join(", ")}
-                  {addons.length > 0 && ` · ${addons.map((a) => a.name).join(", ")}`}
-                  {req.branding.logo && " · Logo added"}
-                </p>
+              {editable && (
+                <Link href={`/projects/${project.id}/requirement`} className={buttonClasses(project.status === "draft" ? "primary" : "secondary", "md", "mt-4")}>
+                  <Pencil />
+                  {req.items.length ? "Edit requirement" : "Build the requirement"}
+                </Link>
               )}
-              <Link href={`/projects/${project.id}/requirement`} className={buttonClasses(editable && project.status === "draft" ? "primary" : "secondary", "md", "mt-4")}>
-                {editable ? <Pencil /> : <ArrowRight />}
-                {editable ? (req.items.length ? "Edit requirement" : "Build the requirement") : "View full requirement"}
-              </Link>
+              {(req.pages.length > 0 || req.items.length > 0) && (
+                <details open={!editable} className="mt-5 border-t border-line pt-4">
+                  <summary className="cursor-pointer text-sm font-medium text-brand-600">
+                    {editable ? "Show the full requirement" : "Full requirement from CST"}
+                  </summary>
+                  <div className="mt-4">
+                    <RequirementSummary req={req} clientName={client.name} />
+                  </div>
+                </details>
+              )}
+              {!editable && req.pages.length === 0 && req.items.length === 0 && (
+                <p className="mt-4 text-sm text-muted">CST hasn&apos;t captured the requirement yet.</p>
+              )}
             </CardBody>
           </Card>
 

@@ -7,19 +7,22 @@ import { PageHeader, EmptyState } from "@/components/page-header";
 import { ProjectTable } from "@/components/projects/project-table";
 import { buttonClasses } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { TECH_HIDDEN, techOnly } from "@/lib/workflow";
 
 export default async function ProjectsPage({ searchParams }: { searchParams: Promise<{ status?: string }> }) {
   const user = await requireUser();
   const { status } = await searchParams;
   const filter = status && status in STATUS ? (status as ProjectStatus) : undefined;
-  const rows = await listProjects(filter ? { statuses: [filter] } : {});
+  const tech = techOnly(user);
+  const rows = await listProjects({ forTech: tech, ...(filter ? { statuses: [filter] } : {}) });
   const canCreate = user.team === "cst" || user.isAdmin;
+  const statuses = (Object.keys(STATUS) as ProjectStatus[]).filter((s) => !tech || !TECH_HIDDEN.includes(s));
 
   return (
     <>
       <PageHeader
         title="Projects"
-        description="Every client delivery, newest activity first."
+        description={tech ? "Projects Product has handed to Tech that are still running, newest activity first." : "Every client delivery, newest activity first."}
         actions={
           canCreate && (
             <Link href="/projects/new" className={buttonClasses("primary")}>
@@ -39,7 +42,7 @@ export default async function ProjectsPage({ searchParams }: { searchParams: Pro
         >
           All
         </Link>
-        {(Object.keys(STATUS) as ProjectStatus[]).map((s) => (
+        {statuses.map((s) => (
           <Link
             key={s}
             href={`/projects?status=${s}`}
@@ -56,7 +59,11 @@ export default async function ProjectsPage({ searchParams }: { searchParams: Pro
         <ProjectTable rows={rows} />
       ) : (
         <EmptyState icon={FolderKanban} title="No projects here yet">
-          {canCreate ? "Start one with New client project." : "CST starts projects when a new client signs."}
+          {canCreate
+            ? "Start one with New client project."
+            : tech
+              ? "Projects show up here once Product hands development to Tech."
+              : "CST starts projects when a new client signs."}
         </EmptyState>
       )}
     </>

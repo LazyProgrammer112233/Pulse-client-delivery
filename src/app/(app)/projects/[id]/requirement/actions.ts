@@ -28,7 +28,7 @@ async function editable(projectId: string) {
   if (!user?.team) return { error: "You've been signed out. Sign in again to keep editing." } as const;
   const [project] = await db.select().from(schema.projects).where(eq(schema.projects.id, projectId)).limit(1);
   if (!project) return { error: "This project no longer exists." } as const;
-  if (!canEditRequirement(user, project)) return { error: "You can't change this requirement right now." } as const;
+  if (!canEditRequirement(user, project)) return { error: "Only CST can change the requirement." } as const;
   return { user, project } as const;
 }
 
