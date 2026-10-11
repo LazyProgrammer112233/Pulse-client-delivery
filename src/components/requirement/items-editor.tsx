@@ -188,7 +188,10 @@ function ItemForm({
   const tabs = pages.find((p) => p.pageKey === item.pageKey)?.tabs ?? [];
   const set = (c: Partial<ItemInput>) => setItem((prev) => ({ ...prev, ...c }));
   const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => ref.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), []);
+  // Braces matter: newer browsers return a Promise from scrollIntoView, and React would call it as a cleanup
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }, []);
   // Pages saved a moment ago arrive with the page refresh; default a new item onto the first one
   useEffect(() => {
     if (!initial.id && !item.pageKey && pages[0]) set({ pageKey: pages[0].pageKey });
