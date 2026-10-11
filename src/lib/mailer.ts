@@ -21,5 +21,7 @@ export async function sendMail({ to, subject, text, html }: { to: string; subjec
     console.log(`\n[mail] to=${to} subject="${subject}"\n${text}\n`);
     return;
   }
-  await transport.sendMail({ from: process.env.EMAIL_FROM || process.env.SMTP_USER, to, subject, text, html });
+  const info = await transport.sendMail({ from: process.env.EMAIL_FROM || process.env.SMTP_USER, to, subject, text, html });
+  // Shows in Vercel's runtime logs, so a missing email can be traced to the SMTP provider's reply
+  console.log(`[mail] to=${to} accepted=${info.accepted.join(",") || "-"} rejected=${info.rejected.join(",") || "-"} response="${info.response}"`);
 }
