@@ -18,7 +18,10 @@ function find(names: string[]) {
 export function databaseUrl({ direct = false } = {}) {
   const url = (direct ? find(DIRECT) : undefined) ?? find(POOLED);
   if (!url) {
+    // Names only, never values: shows what the build can see when the connection is misnamed
+    const seen = Object.keys(process.env).filter((k) => /DATABASE|POSTGRES|NEON|^PG/i.test(k));
     throw new Error(
+      `Database-related variables visible to this build: ${seen.length ? seen.join(", ") : "none"}. ` +
       "No database connection string found. Connect a Neon database to this Vercel project " +
         "(Storage tab, enable it for Production and Preview), or set DATABASE_URL, then redeploy.",
     );
