@@ -164,6 +164,10 @@ export default async function LoginPage({
               </Button>
             </form>
           )}
+
+          <p className="mt-6 text-center text-[11px] text-muted/70">
+            Version {(process.env.VERCEL_GIT_COMMIT_SHA || "local").slice(0, 7)}
+          </p>
         </section>
       </div>
     </main>
