@@ -23,7 +23,7 @@ export function AddUserForm() {
       <div className="mt-4 grid gap-3 md:grid-cols-[1.4fr_1fr_0.8fr_auto_auto] md:items-end">
         <div>
           <Label htmlFor="email">Work email</Label>
-          <Input id="email" name="email" type="email" required placeholder="name@fieldassist.com" />
+          <Input id="email" name="email" type="email" required placeholder="name@flick2know.com" />
         </div>
         <div>
           <Label htmlFor="name">Name</Label>

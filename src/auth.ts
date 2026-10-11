@@ -15,7 +15,7 @@ export const isMicrosoftConfigured = !!(
 );
 
 const providers: Provider[] = [
-  // Primary sign-in: a 6-digit code emailed to a @fieldassist.com address
+  // Primary sign-in: a 6-digit code emailed to a @flick2know.com address
   Credentials({
     id: "email-otp",
     name: "Email code",

@@ -10,12 +10,12 @@ Internal portal for delivering Pulse web dashboards and the Pulse app to new cli
 | Hosting | Vercel Hobby |
 | Database | Neon Postgres free tier, through Vercel's Neon integration |
 | ORM | Drizzle (migrations in `drizzle/`) |
-| Sign-in | Auth.js with a one-time code emailed to `@fieldassist.com` addresses (Microsoft 365 sign-in can be switched on later) |
+| Sign-in | Auth.js with a one-time code emailed to `@flick2know.com` addresses (Microsoft 365 sign-in can be switched on later) |
 | Email | Any SMTP sender; Brevo free tier (300 emails a day) or a Gmail app password |
 
 ## What works today (step 1)
 
-- Email code sign-in: enter your work email, get a 6-digit code, type it in. Any email outside `@fieldassist.com` is rejected on the server with "This email is not a work email". Codes expire after 10 minutes, work once, allow 5 tries, and at most 5 codes go out per email every 15 minutes.
+- Email code sign-in: enter your work email, get a 6-digit code, type it in. Any email outside `@flick2know.com` is rejected on the server with "This email is not a work email". Codes expire after 10 minutes, work once, allow 5 tries, and at most 5 codes go out per email every 15 minutes.
 - First sign-in asks for the team (CST, Product or Tech) and opens that team's dashboard.
 - CST creates a client project: pick a Pulse company by name or company ID, or add a new client, then choose web dashboard, Pulse app or both.
 - Project page with the delivery lifecycle, activity timeline, comments, and "Assign to Product".
@@ -64,7 +64,7 @@ In **Settings > Environment Variables**, add:
 | `SMTP_USER` | Brevo SMTP login (or the Gmail address) |
 | `SMTP_PASS` | Brevo SMTP key (or the Gmail app password) |
 | `EMAIL_FROM` | `Pulse Delivery <the-sender-you-verified@...>` |
-| `ADMIN_EMAILS` | Comma-separated emails that become admins on first sign-in, for example `ishan@fieldassist.com` |
+| `ADMIN_EMAILS` | Comma-separated emails that become admins on first sign-in, for example `ishan@flick2know.com` |
 
 Then **Deployments > Redeploy**. Open the site, enter your work email, and sign in with the code.
 

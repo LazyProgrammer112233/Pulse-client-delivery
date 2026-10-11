@@ -1,5 +1,5 @@
 // Only this work domain can sign in. Kept in code so a stale Vercel variable can never override it.
-export const allowedDomain = "fieldassist.com";
+export const allowedDomain = "flick2know.com";
 
 export function isWorkEmail(email?: string | null) {
   if (!email) return false;
