@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* Two-tone Pulse theme: Pulse blue on white. Change the brand scale here to retheme the app. */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dce8ff;
+  --color-brand-200: #b9d0ff;
+  --color-brand-300: #8db1fb;
+  --color-brand-400: #5a8bf5;
+  --color-brand-500: #2f6aee;
+  --color-brand-600: #1e56d9;
+  --color-brand-700: #1a45b0;
+  --color-brand-800: #1a3b8c;
+  --color-brand-900: #182f6b;
+
+  --color-ink: #0f1b33;
+  --color-muted: #5b6b86;
+  --color-line: #e3e9f3;
+  --color-canvas: #f7f9fd;
+
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  body {
+    @apply bg-canvas text-ink antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+}
+
+@layer components {
+  /* White-to-tint gradient that separates cards from the white page */
+  .card-surface {
+    @apply rounded-2xl border border-line bg-gradient-to-br from-white via-white to-brand-50/60 shadow-[0_1px_2px_rgba(16,40,90,0.04),0_4px_16px_rgba(16,40,90,0.04)];
+  }
+  .card-surface-hover {
+    @apply transition hover:border-brand-200 hover:shadow-[0_2px_4px_rgba(16,40,90,0.06),0_8px_24px_rgba(30,86,217,0.08)];
+  }
+}
